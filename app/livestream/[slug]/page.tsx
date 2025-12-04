@@ -1,5 +1,3 @@
 export default function LivestreamDetail() {
-    return {
-
-    }
+    return <div>Livestream Detail</div>;
 }

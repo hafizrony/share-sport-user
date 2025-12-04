@@ -2,12 +2,13 @@
 
 import { useState, useEffect } from "react";
 import {useBanner} from "@/app/src/hook/useBanner";
+import {Banner} from "@/app/src/interface/banner.interface"
 import Image from "next/image";
 
 export default function BigBanner() {
     const [current, setCurrent] = useState(0);
     const { data: ads, isLoading, isError, error} = useBanner();
-    const adsFilter = ads?.filter(banner => {
+    const adsFilter = ads?.filter((banner: Banner) => {
         if (banner.position !== "header") return false;
         const now = new Date();
         const start = new Date(banner.start_at);

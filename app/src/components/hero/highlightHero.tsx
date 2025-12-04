@@ -2,6 +2,7 @@
 import Link from "next/link";
 import HighlightCard from "@/app/src/components/highlightCard";
 import {useHighlight} from "@/app/src/hook/useHighlight";
+import {Highlight} from "@/app/src/interface/highlight.interface";
 
 export default function HighlightHero() {
     const {data:highlights, isLoading, isError} = useHighlight();
@@ -35,7 +36,17 @@ export default function HighlightHero() {
                         key={index}
                         hidePlayButton={true}
                         largeText={false}
-                        Highlight={video}
+                        Highlight={{
+                            id: video.id,
+                            title: video.title,
+                            thumbnail_url: video.thumbnail_url,
+                            video_url: video.video_url,
+                            published_at: video.published_at,
+                            views_count: video.views_count,
+                            slug: video.slug,
+                            category: video.category,
+                            summary: video.summary,
+                        }}
                     />
                 ))}
 

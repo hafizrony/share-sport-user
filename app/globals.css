@@ -79,13 +79,12 @@ html,
 
 .header-overlay {
     z-index: 1;
-    background: var();
 }
 
 .header-specular {
     z-index: 2;
-    box-shadow: inset 1px 1px 0 var(),
-    inset 0 0 5px var();
+    box-shadow: inset 1px 1px 0,
+    inset 0 0 5px;
 }
 
 .header-content {
