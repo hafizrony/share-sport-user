@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../app/livestream/page.tsx"],"sourcesContent":["import React from 'react';\nexport default function LivestreamPage () {\n    return <div>Livestream</div>;\n}"],"names":[],"mappings":"qVACe,SAAS,IACpB,MAAO,CAAA,EAAA,EAAA,GAAA,EAAC,MAAA,UAAI,cAChB"}

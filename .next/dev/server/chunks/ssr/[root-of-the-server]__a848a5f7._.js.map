@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///Users/macos/Desktop/8Pro/Dev/share-sport-user/app/livestream/page.tsx"],"sourcesContent":["import React from 'react';\nexport default function LivestreamPage () {\n    return <div>Livestream</div>;\n}"],"names":[],"mappings":";;;;;;AACe,SAAS;IACpB,qBAAO,8OAAC;kBAAI;;;;;;AAChB"}}]
+}

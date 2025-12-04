@@ -46,6 +46,8 @@ export default function HighlightHero() {
                             slug: video.slug,
                             category: video.category,
                             summary: video.summary,
+
+
                         }}
                     />
                 ))}

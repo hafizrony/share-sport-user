@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../app/livescore/page.tsx"],"sourcesContent":["import React from 'react';\n\nexport default function LivescorePage() {\n  return <div>Livescore</div>;\n}\n"],"names":[],"mappings":"qVAEe,SAAS,IACtB,MAAO,CAAA,EAAA,EAAA,GAAA,EAAC,MAAA,UAAI,aACd"}

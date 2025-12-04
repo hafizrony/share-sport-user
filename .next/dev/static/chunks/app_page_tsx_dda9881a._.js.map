@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/macos/Desktop/8Pro/Dev/share-sport-user/app/page.tsx"],"sourcesContent":["'use client';\n\nexport default function Home() {\n    return (\n        <div className=\"text-center py-20\">\n            <h1 className=\"text-4xl font-bold text-gray-900 mb-4\">\n                Welcome to SportsApp\n            </h1>\n            <p className=\"text-lg text-gray-600\">\n                Check out the latest live scores and news updates.\n            </p>\n\n            {/* You can add your LiveStreamCard or NewsListCard here later */}\n        </div>\n    );\n}"],"names":[],"mappings":";;;;;AAAA;;AAEe,SAAS;IACpB,qBACI,6LAAC;QAAI,WAAU;;0BACX,6LAAC;gBAAG,WAAU;0BAAwC;;;;;;0BAGtD,6LAAC;gBAAE,WAAU;0BAAwB;;;;;;;;;;;;AAOjD;KAbwB"}}]
+}

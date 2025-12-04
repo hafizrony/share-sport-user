@@ -1,0 +1,11 @@
+[00:00:02.081] Server  LOG      ✓ Ready in 1428ms
+[00:00:07.910] Server  LOG      ○ Compiling /highlight/[slug] ...
+[00:00:12.041] Browser LOG     video http://localhost:8000/api/highlight/13
+[00:07:43.988] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+1" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[00:07:44.002] Server  ERROR    ⨯ The requested resource "https://placehold.co/800x400?text=Breaking+News" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[00:07:44.022] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/22c55e/FFF?text=Side+Ad+1" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[00:07:44.028] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+3" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[00:07:44.046] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+2" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[00:07:44.049] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+4" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[00:07:44.107] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+5" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[00:07:54.058] Browser LOG     video http://localhost:8000/api/highlight/7
