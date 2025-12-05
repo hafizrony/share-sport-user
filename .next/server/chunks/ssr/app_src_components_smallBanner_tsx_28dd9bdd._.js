@@ -1,3 +1,0 @@
-module.exports=[87736,a=>{"use strict";var b=a.i(87924),c=a.i(72131),d=a.i(71987);let e=["https://placehold.co/300x250/22c55e/FFF?text=Side+Ad+1","https://placehold.co/300x250/eab308/000?text=Side+Ad+2"];function f(){let[a,f]=(0,c.useState)(0);return(0,c.useEffect)(()=>{let a=setInterval(()=>{f(a=>(a+1)%e.length)},5e3);return()=>clearInterval(a)},[]),(0,b.jsx)("div",{className:"w-full rounded-lg overflow-hidden shadow-md my-4",children:(0,b.jsx)("a",{href:"#",target:"_blank",children:(0,b.jsx)(d.default,{src:e[a],width:300,height:250,alt:"Side Ad",className:"w-full h-auto object-cover"})})})}a.s(["default",()=>f])}];
-
-//# sourceMappingURL=app_src_components_smallBanner_tsx_28dd9bdd._.js.map

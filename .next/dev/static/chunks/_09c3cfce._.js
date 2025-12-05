@@ -96,6 +96,19 @@ class ApiService {
             console.log("API Service", e);
         }
     }
+    async fetchNewsBySlug(slug) {
+        const url = `${__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$src$2f$utils$2f$endpoints$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ENDPOINTS"].NEWS}/${slug}`;
+        try {
+            const response = await fetch(url, {
+                next: {
+                    revalidate: 60
+                }
+            });
+            return await response.json();
+        } catch (e) {
+            console.log("API Service", e);
+        }
+    }
     async fetchLiveMatch() {
         const url = __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$src$2f$utils$2f$endpoints$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ENDPOINTS"].LIVE_MATCH;
         try {
@@ -676,9 +689,7 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 
 __turbopack_context__.s([
     "useNews",
-    ()=>useNews,
-    "useNewsSlug",
-    ()=>useNewsSlug
+    ()=>useNews
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useQuery$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@tanstack/react-query/build/modern/useQuery.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$src$2f$utils$2f$api$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/app/src/utils/api.ts [app-client] (ecmascript)");
@@ -704,7 +715,6 @@ _s(useNews, "4ZpngI1uv+Uo3WQHEZmTQ5FNM+k=", false, function() {
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useQuery$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useQuery"]
     ];
 });
-const useNewsSlug = ()=>{};
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }

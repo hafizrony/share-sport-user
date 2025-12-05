@@ -1,13 +1,15 @@
 "use client";
 
 import React,{useEffect} from "react";
-import { Calendar, Eye, Clock, Share2, MoreHorizontal, ChevronLeft, CheckCircle2, Loader2 } from "lucide-react";
+import { Calendar, Eye, Clock, Loader2 } from "lucide-react";
 import ReactPlayer from "react-player";
 import { useHighlightBySlug } from "../../src/hook/useHighlightBySlug";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import Image from "next/image";
 import {ENDPOINTS} from "@/app/src/utils/endpoints";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 
 const formatDate = (dateString: string) =>
     dateString ? new Date(dateString).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }) : "";
@@ -114,8 +116,15 @@ export default function VideoDetailPage() {
                 <div className="pt-10">
                     <div className="flex items-start gap-4">
                         <div className="flex-1">
-                                <p>{video.summary}</p>
-                                {video.content && <p>{video.content}</p>}
+                            <p>{video.summary}</p>
+                            <article className="prose prose-lg max-w-none">
+                                <ReactMarkdown
+                                    remarkPlugins={[remarkGfm]}
+                                    rehypePlugins={[rehypeRaw]}
+                                >
+                                    {video.content}
+                                </ReactMarkdown>
+                            </article>
                         </div>
                     </div>
                 </div>

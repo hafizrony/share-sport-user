@@ -11,6 +11,3 @@ export const useNews = () => {
         refetchOnMount: false,
     })
 }
-export const useNewsSlug=()=>{
-
-}

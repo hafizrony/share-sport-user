@@ -432,15 +432,13 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 function HighlightPage() {
     const { data: highlights, isLoading: isHighlightLoading, isError: isHighlightError } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$src$2f$hook$2f$useHighlight$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useHighlight"])();
     const { data: banners, isLoading: isBannerLoading, isError: isBannerError } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$src$2f$hook$2f$useBanner$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useBanner"])();
-    // State for the search query
     const [searchQuery, setSearchQuery] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
-    const highlightArray = Array.isArray(highlights) ? highlights : highlights?.data || [];
-    // Filter highlights based on the search query (title)
     const filteredHighlights = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>{
+        const highlightArray = Array.isArray(highlights) ? highlights : highlights?.data || [];
         if (!searchQuery.trim()) return highlightArray;
         return highlightArray.filter((item)=>item.title.toLowerCase().includes(searchQuery.toLowerCase()));
     }, [
-        highlightArray,
+        highlights,
         searchQuery
     ]);
     const sidebarBanners = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>{
@@ -456,14 +454,14 @@ function HighlightPage() {
     ]);
     if (isHighlightLoading || isBannerLoading) return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$src$2f$components$2f$loader$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
         fileName: "[project]/app/highlight/page.tsx",
-        lineNumber: 42,
+        lineNumber: 40,
         columnNumber: 55
     }, this);
     if (isHighlightError || isBannerError) return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         children: "Error"
     }, void 0, false, {
         fileName: "[project]/app/highlight/page.tsx",
-        lineNumber: 43,
+        lineNumber: 41,
         columnNumber: 51
     }, this);
     const showSidebar = sidebarBanners.length > 0;
@@ -475,7 +473,7 @@ function HighlightPage() {
                 className: "grid grid-cols-1 lg:grid-cols-12 gap-8",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: showSidebar ? "lg:col-span-8" : "lg:col-span-12",
+                        className: showSidebar ? "lg:col-span-10" : "lg:col-span-12",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "flex flex-col sm:flex-row sm:items-center justify-between mb-6 gap-4",
@@ -497,7 +495,7 @@ function HighlightPage() {
                                                         d: "M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/highlight/page.tsx",
-                                                        lineNumber: 58,
+                                                        lineNumber: 56,
                                                         columnNumber: 37
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -507,20 +505,20 @@ function HighlightPage() {
                                                         d: "M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/highlight/page.tsx",
-                                                        lineNumber: 59,
+                                                        lineNumber: 57,
                                                         columnNumber: 37
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/highlight/page.tsx",
-                                                lineNumber: 57,
+                                                lineNumber: 55,
                                                 columnNumber: 33
                                             }, this),
                                             "HIGHLIGHTS"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/highlight/page.tsx",
-                                        lineNumber: 56,
+                                        lineNumber: 54,
                                         columnNumber: 29
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -532,12 +530,12 @@ function HighlightPage() {
                                                     className: "h-5 w-5 text-gray-400"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/highlight/page.tsx",
-                                                    lineNumber: 67,
+                                                    lineNumber: 65,
                                                     columnNumber: 37
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/highlight/page.tsx",
-                                                lineNumber: 66,
+                                                lineNumber: 64,
                                                 columnNumber: 33
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -548,19 +546,19 @@ function HighlightPage() {
                                                 onChange: (e)=>setSearchQuery(e.target.value)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/highlight/page.tsx",
-                                                lineNumber: 69,
+                                                lineNumber: 67,
                                                 columnNumber: 33
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/highlight/page.tsx",
-                                        lineNumber: 65,
+                                        lineNumber: 63,
                                         columnNumber: 29
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/highlight/page.tsx",
-                                lineNumber: 55,
+                                lineNumber: 53,
                                 columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -583,12 +581,12 @@ function HighlightPage() {
                                             summary: item.summary
                                         }, void 0, false, {
                                             fileName: "[project]/app/highlight/page.tsx",
-                                            lineNumber: 85,
+                                            lineNumber: 83,
                                             columnNumber: 45
                                         }, this)
                                     }, item.id, false, {
                                         fileName: "[project]/app/highlight/page.tsx",
-                                        lineNumber: 84,
+                                        lineNumber: 82,
                                         columnNumber: 41
                                     }, this);
                                 }) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -600,22 +598,22 @@ function HighlightPage() {
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/highlight/page.tsx",
-                                    lineNumber: 103,
+                                    lineNumber: 101,
                                     columnNumber: 33
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/highlight/page.tsx",
-                                lineNumber: 80,
+                                lineNumber: 78,
                                 columnNumber: 25
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/highlight/page.tsx",
-                        lineNumber: 53,
+                        lineNumber: 51,
                         columnNumber: 21
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "lg:col-span-4 space-y-8",
+                        className: "lg:col-span-2",
                         children: sidebarBanners.map((item)=>{
                             return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$src$2f$components$2f$adsBanner$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -628,34 +626,34 @@ function HighlightPage() {
                                     end_at: item.end_at
                                 }, void 0, false, {
                                     fileName: "[project]/app/highlight/page.tsx",
-                                    lineNumber: 116,
+                                    lineNumber: 113,
                                     columnNumber: 37
                                 }, this)
                             }, item.id, false, {
                                 fileName: "[project]/app/highlight/page.tsx",
-                                lineNumber: 115,
+                                lineNumber: 112,
                                 columnNumber: 33
                             }, this);
                         })
                     }, void 0, false, {
                         fileName: "[project]/app/highlight/page.tsx",
-                        lineNumber: 112,
+                        lineNumber: 109,
                         columnNumber: 21
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/highlight/page.tsx",
-                lineNumber: 51,
+                lineNumber: 49,
                 columnNumber: 17
             }, this)
         }, void 0, false, {
             fileName: "[project]/app/highlight/page.tsx",
-            lineNumber: 50,
+            lineNumber: 48,
             columnNumber: 13
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/highlight/page.tsx",
-        lineNumber: 48,
+        lineNumber: 46,
         columnNumber: 9
     }, this);
 }

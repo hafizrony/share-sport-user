@@ -1,6 +1,6 @@
 import React, {useRef, useState} from "react";
 import {useRouter} from "next/navigation";
-import {PlayCircle} from "lucide-react";
+import {Eye, PlayCircle} from "lucide-react";
 import {AgoTime} from "@/app/src/utils/agoTime";
 import {Highlight} from "@/app/src/interface/highlight.interface";
 
@@ -8,6 +8,12 @@ const HighlightStandardCard: React.FC<Highlight> = (video:Highlight) => {
     const router = useRouter();
     const videoRef = useRef<HTMLVideoElement>(null);
     const [isHovered, setIsHovered] = useState(false);
+    const formatViews = (num: number) => {
+        if (!num) return "0";
+        if (num >= 1000000) return (num / 1000000).toFixed(1) + "M";
+        if (num >= 1000) return (num / 1000).toFixed(1) + "k";
+        return num.toString();
+    };
 
     return (
         <div className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 flex flex-col h-full cursor-pointer"
@@ -60,9 +66,14 @@ const HighlightStandardCard: React.FC<Highlight> = (video:Highlight) => {
                     </p>
                 </div>
 
-                <div className="flex items-center justify-end text-xs text-gray-400">
+                <div className="flex items-center justify-start text-xs text-gray-400 space-x-2">
+                    <div className="flex items-center space-x-1">
+                        <Eye className="w-5 h-5 text-slate-400" />
+                        <span>{formatViews(video.views_count)} views</span>
+                    </div>
                     <span>{AgoTime(video.published_at)}</span>
                 </div>
+
             </div>
         </div>
     )};

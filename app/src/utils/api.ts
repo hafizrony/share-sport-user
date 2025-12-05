@@ -59,6 +59,18 @@ class ApiService {
             console.log("API Service",e)
         }
     }
+    async fetchNewsBySlug(slug: string)
+    {
+        const url = `${ENDPOINTS.NEWS}/${slug}`;
+        try {
+            const response = await fetch(url,{
+                next: { revalidate: 60 }
+            });
+            return await response.json();
+        }catch (e) {
+            console.log("API Service",e)
+        }
+    }
     async fetchLiveMatch()
     {
         const url = ENDPOINTS.LIVE_MATCH;

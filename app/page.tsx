@@ -5,7 +5,7 @@ import HighlightHero from "@/app/src/components/hero/highlightHero";
 
 export default async function Home() {
     return (
-        <div className="space-y-4">
+        <div className="space-y-4 container">
             <BigBanner />
             <LiveStreamScrollCardForHome />
             <NewsHero is_featured={true} is_breaking={false}/>

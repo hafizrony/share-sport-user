@@ -93,6 +93,19 @@ class ApiService {
             console.log("API Service", e);
         }
     }
+    async fetchNewsBySlug(slug) {
+        const url = `${__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$src$2f$utils$2f$endpoints$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ENDPOINTS"].NEWS}/${slug}`;
+        try {
+            const response = await fetch(url, {
+                next: {
+                    revalidate: 60
+                }
+            });
+            return await response.json();
+        } catch (e) {
+            console.log("API Service", e);
+        }
+    }
     async fetchLiveMatch() {
         const url = __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$src$2f$utils$2f$endpoints$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ENDPOINTS"].LIVE_MATCH;
         try {
@@ -220,12 +233,12 @@ function VideoDetailPage() {
                 className: "w-8 h-8 animate-spin text-slate-500"
             }, void 0, false, {
                 fileName: "[project]/app/highlight/[slug]/page.tsx",
-                lineNumber: 51,
+                lineNumber: 50,
                 columnNumber: 17
             }, this)
         }, void 0, false, {
             fileName: "[project]/app/highlight/[slug]/page.tsx",
-            lineNumber: 50,
+            lineNumber: 49,
             columnNumber: 13
         }, this);
     }
@@ -240,7 +253,7 @@ function VideoDetailPage() {
                         children: "Video not found"
                     }, void 0, false, {
                         fileName: "[project]/app/highlight/[slug]/page.tsx",
-                        lineNumber: 60,
+                        lineNumber: 59,
                         columnNumber: 21
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -249,18 +262,18 @@ function VideoDetailPage() {
                         children: "Back to Highlights"
                     }, void 0, false, {
                         fileName: "[project]/app/highlight/[slug]/page.tsx",
-                        lineNumber: 61,
+                        lineNumber: 60,
                         columnNumber: 21
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/highlight/[slug]/page.tsx",
-                lineNumber: 59,
+                lineNumber: 58,
                 columnNumber: 17
             }, this)
         }, void 0, false, {
             fileName: "[project]/app/highlight/[slug]/page.tsx",
-            lineNumber: 58,
+            lineNumber: 57,
             columnNumber: 13
         }, this);
     }
@@ -279,12 +292,12 @@ function VideoDetailPage() {
                         height: "100%"
                     }, void 0, false, {
                         fileName: "[project]/app/highlight/[slug]/page.tsx",
-                        lineNumber: 77,
+                        lineNumber: 76,
                         columnNumber: 21
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/highlight/[slug]/page.tsx",
-                    lineNumber: 76,
+                    lineNumber: 75,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -298,7 +311,7 @@ function VideoDetailPage() {
                                     children: video.category.name
                                 }, void 0, false, {
                                     fileName: "[project]/app/highlight/[slug]/page.tsx",
-                                    lineNumber: 88,
+                                    lineNumber: 87,
                                     columnNumber: 29
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -308,20 +321,20 @@ function VideoDetailPage() {
                                             className: "w-4 h-4"
                                         }, void 0, false, {
                                             fileName: "[project]/app/highlight/[slug]/page.tsx",
-                                            lineNumber: 93,
+                                            lineNumber: 92,
                                             columnNumber: 29
                                         }, this),
                                         formatDate(video.published_at)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/highlight/[slug]/page.tsx",
-                                    lineNumber: 92,
+                                    lineNumber: 91,
                                     columnNumber: 25
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/highlight/[slug]/page.tsx",
-                            lineNumber: 86,
+                            lineNumber: 85,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -329,7 +342,7 @@ function VideoDetailPage() {
                             children: video.title
                         }, void 0, false, {
                             fileName: "[project]/app/highlight/[slug]/page.tsx",
-                            lineNumber: 98,
+                            lineNumber: 97,
                             columnNumber: 21
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -344,7 +357,7 @@ function VideoDetailPage() {
                                                 className: "w-5 h-5 text-slate-400"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/highlight/[slug]/page.tsx",
-                                                lineNumber: 105,
+                                                lineNumber: 104,
                                                 columnNumber: 33
                                             }, this),
                                             " ",
@@ -353,7 +366,7 @@ function VideoDetailPage() {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/highlight/[slug]/page.tsx",
-                                        lineNumber: 104,
+                                        lineNumber: 103,
                                         columnNumber: 29
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -363,7 +376,7 @@ function VideoDetailPage() {
                                                 className: "w-5 h-5 text-slate-400"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/highlight/[slug]/page.tsx",
-                                                lineNumber: 108,
+                                                lineNumber: 107,
                                                 columnNumber: 33
                                             }, this),
                                             " ",
@@ -371,24 +384,24 @@ function VideoDetailPage() {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/highlight/[slug]/page.tsx",
-                                        lineNumber: 107,
+                                        lineNumber: 106,
                                         columnNumber: 29
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/highlight/[slug]/page.tsx",
-                                lineNumber: 103,
+                                lineNumber: 102,
                                 columnNumber: 25
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/highlight/[slug]/page.tsx",
-                            lineNumber: 102,
+                            lineNumber: 101,
                             columnNumber: 21
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/highlight/[slug]/page.tsx",
-                    lineNumber: 85,
+                    lineNumber: 84,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -402,41 +415,41 @@ function VideoDetailPage() {
                                     children: video.summary
                                 }, void 0, false, {
                                     fileName: "[project]/app/highlight/[slug]/page.tsx",
-                                    lineNumber: 117,
+                                    lineNumber: 116,
                                     columnNumber: 33
                                 }, this),
                                 video.content && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     children: video.content
                                 }, void 0, false, {
                                     fileName: "[project]/app/highlight/[slug]/page.tsx",
-                                    lineNumber: 118,
+                                    lineNumber: 117,
                                     columnNumber: 51
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/highlight/[slug]/page.tsx",
-                            lineNumber: 116,
+                            lineNumber: 115,
                             columnNumber: 25
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/highlight/[slug]/page.tsx",
-                        lineNumber: 115,
+                        lineNumber: 114,
                         columnNumber: 21
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/highlight/[slug]/page.tsx",
-                    lineNumber: 114,
+                    lineNumber: 113,
                     columnNumber: 17
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/highlight/[slug]/page.tsx",
-            lineNumber: 75,
+            lineNumber: 74,
             columnNumber: 13
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/highlight/[slug]/page.tsx",
-        lineNumber: 74,
+        lineNumber: 73,
         columnNumber: 9
     }, this);
 }

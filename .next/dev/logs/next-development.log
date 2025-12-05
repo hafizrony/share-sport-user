@@ -1,11 +1,532 @@
-[00:00:02.081] Server  LOG      ✓ Ready in 1428ms
-[00:00:07.910] Server  LOG      ○ Compiling /highlight/[slug] ...
-[00:00:12.041] Browser LOG     video http://localhost:8000/api/highlight/13
-[00:07:43.988] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+1" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
-[00:07:44.002] Server  ERROR    ⨯ The requested resource "https://placehold.co/800x400?text=Breaking+News" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
-[00:07:44.022] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/22c55e/FFF?text=Side+Ad+1" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
-[00:07:44.028] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+3" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
-[00:07:44.046] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+2" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
-[00:07:44.049] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+4" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
-[00:07:44.107] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+5" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
-[00:07:54.058] Browser LOG     video http://localhost:8000/api/highlight/7
+[00:00:01.648] Server  LOG      ✓ Ready in 1150ms
+[00:00:06.477] Server  LOG      ○ Compiling /highlight/[slug] ...
+[00:00:09.047] Browser LOG     video http://localhost:8000/api/highlight/7
+[00:22:39.365] Server  LOG      ✓ Compiled in 377ms
+[00:25:05.513] Server  LOG      ✓ Compiled in 119ms
+[00:25:05.829] Browser ERROR   uncaughtError: ReferenceError: highlightArray is not defined
+[00:25:41.272] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:25:41.295] Server  LOG      ✓ Compiled in 35ms
+[00:26:31.075] Server  LOG      ✓ Compiled in 212ms
+[00:27:02.827] Server  LOG      ✓ Compiled in 257ms
+[00:27:09.109] Server  LOG      ✓ Compiled in 45ms
+[00:27:12.536] Server  LOG      ✓ Compiled in 27ms
+[00:27:27.749] Server  LOG      ✓ Compiled in 27ms
+[00:29:07.557] Server  LOG      ✓ Compiled in 100ms
+[00:29:13.170] Server  LOG      ✓ Compiled in 37ms
+[00:30:45.435] Server  LOG      ✓ Compiled in 107ms
+[00:30:58.279] Server  LOG      ✓ Compiled in 39ms
+[00:32:50.600] Server  LOG      ✓ Compiled in 63ms
+[00:36:59.894] Server  LOG      ✓ Compiled in 588ms
+[00:43:17.401] Server  LOG      ✓ Compiled in 211ms
+[00:51:15.911] Server  LOG      ✓ Compiled in 3.3s
+[00:54:17.460] Server  LOG      ✓ Compiled in 145ms
+[00:57:32.446] Server  LOG      ✓ Compiled in 306ms
+[00:57:40.798] Server  LOG      ✓ Compiled in 57ms
+[00:57:51.821] Server  LOG      ✓ Compiled in 55ms
+[00:57:55.275] Server  LOG      ✓ Compiled in 61ms
+[00:58:07.280] Server  LOG      ✓ Compiled in 129ms
+[01:05:17.777] Server  LOG      ✓ Compiled in 429ms
+[01:09:07.733] Server  LOG      ✓ Compiled in 463ms
+[01:09:29.631] Server  LOG      ✓ Compiled in 199ms
+[01:10:01.990] Server  LOG      ✓ Compiled in 108ms
+[01:11:12.857] Server  LOG      ✓ Compiled in 100ms
+[01:11:40.598] Server  LOG      ✓ Compiled in 168ms
+[01:12:26.651] Server  LOG      ✓ Compiled in 142ms
+[01:13:00.622] Server  LOG      ✓ Compiled in 197ms
+[01:25:13.309] Server  LOG      ✓ Compiled in 126ms
+[01:25:27.720] Server  LOG      ✓ Compiled in 78ms
+[01:25:51.054] Server  LOG      ✓ Compiled in 100ms
+[01:27:02.618] Server  LOG      ✓ Compiled in 1249ms
+[01:27:09.295] Server  LOG      ✓ Compiled in 57ms
+[01:27:17.098] Server  LOG      ✓ Compiled in 86ms
+[01:27:41.805] Server  LOG      ✓ Compiled in 76ms
+[01:33:29.234] Server  LOG      ✓ Compiled in 134ms
+[01:33:47.728] Server  LOG      ✓ Compiled in 127ms
+[01:36:56.596] Server  LOG      ✓ Compiled in 89ms
+[01:37:34.768] Server  LOG      ✓ Compiled in 92ms
+[01:38:08.875] Server  LOG      ✓ Compiled in 46ms
+[01:38:26.003] Server  LOG      ✓ Compiled in 227ms
+[01:39:58.899] Server  LOG      ✓ Compiled in 142ms
+[01:40:13.211] Server  LOG      ✓ Compiled in 56ms
+[01:40:59.007] Server  LOG      ✓ Compiled in 149ms
+[01:41:42.438] Server  LOG      ✓ Compiled in 189ms
+[01:41:53.220] Server  LOG      ✓ Compiled in 38ms
+[01:42:07.958] Server  LOG      ✓ Compiled in 206ms
+[01:42:25.372] Server  LOG      ✓ Compiled in 113ms
+[01:42:29.833] Server  LOG      ✓ Compiled in 181ms
+[01:42:38.554] Server  LOG      ✓ Compiled in 117ms
+[01:43:05.070] Server  LOG      ✓ Compiled in 323ms
+[01:43:29.793] Server  LOG      ✓ Compiled in 172ms
+[01:43:56.375] Server  LOG      ✓ Compiled in 71ms
+[01:44:07.557] Server  LOG      ✓ Compiled in 50ms
+[01:44:31.295] Server  LOG      ✓ Compiled in 182ms
+[01:44:50.518] Server  LOG      ✓ Compiled in 40ms
+[01:49:39.673] Browser LOG     video http://localhost:8000/api/highlight/7
+[02:08:19.318] Server  LOG      ✓ Compiled in 1483ms
+[02:12:52.444] Server  LOG      ✓ Compiled in 117ms
+[02:16:18.246] Server  LOG      ✓ Compiled in 123ms
+[02:16:40.029] Browser LOG     video http://localhost:8000/api/highlight/8
+[03:26:26.100] Server  LOG      ✓ Compiled in 219ms
+[03:28:42.042] Server  LOG      ✓ Compiled in 121ms
+[03:29:10.710] Server  LOG      ✓ Compiled in 364ms
+[03:29:31.803] Server  LOG      ✓ Compiled in 58ms
+[03:30:39.093] Server  LOG      ✓ Compiled in 90ms
+[03:32:19.788] Server  LOG      ✓ Compiled in 1647ms
+[03:32:40.598] Server  LOG      ✓ Compiled in 47ms
+[03:32:48.210] Server  LOG      ✓ Compiled in 44ms
+[03:33:09.848] Server  LOG      ✓ Compiled in 46ms
+[03:33:17.943] Server  LOG      ✓ Compiled in 192ms
+[03:33:36.185] Server  LOG      ✓ Compiled in 39ms
+[03:33:49.196] Server  LOG      ✓ Compiled in 73ms
+[03:36:04.470] Server  LOG      ✓ Compiled in 811ms
+[03:36:28.019] Server  LOG      ✓ Compiled in 62ms
+[03:40:00.708] Server  LOG      ✓ Compiled in 126ms
+[03:41:20.298] Server  LOG      ✓ Compiled in 88ms
+[03:41:38.612] Server  LOG      ✓ Compiled in 136ms
+[03:41:50.567] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+5" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[03:41:50.651] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/22c55e/FFF?text=Side+Ad+1" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[03:41:51.077] Server  ERROR    ⨯ The requested resource "https://placehold.co/800x400?text=Breaking+News" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[03:41:51.097] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+4" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[03:41:51.536] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+2" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[03:41:51.600] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+1" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[03:41:52.203] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+3" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[03:41:55.951] Browser LOG     video http://localhost:8000/api/highlight/7
+[03:43:05.769] Server  ERROR    ⨯ The requested resource "https://placehold.co/800x400?text=Breaking+News" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[03:43:05.792] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+2" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[03:43:05.793] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+3" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[03:43:05.799] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+4" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[03:43:05.800] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+1" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[03:43:05.801] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+5" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[03:43:05.850] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/22c55e/FFF?text=Side+Ad+1" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[03:43:46.290] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+4" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[03:43:46.292] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+1" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[03:43:46.294] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+5" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[03:43:46.295] Server  ERROR    ⨯ The requested resource "https://placehold.co/800x400?text=Breaking+News" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[03:43:46.307] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+1" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[03:43:46.308] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+2" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[03:43:46.311] Server  ERROR    ⨯ The requested resource "https://placehold.co/800x400?text=Breaking+News" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[03:43:46.321] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+5" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[03:43:46.325] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+4" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[03:43:46.326] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+3" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[03:43:46.332] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+2" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[03:43:46.337] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+3" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[03:43:50.197] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+4" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[03:43:50.200] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+1" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[03:43:50.204] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+2" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[03:43:50.207] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+3" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[03:43:50.209] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+5" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[03:43:50.211] Server  ERROR    ⨯ The requested resource "https://placehold.co/800x400?text=Breaking+News" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[03:45:43.125] Server  LOG      ✓ Compiled in 84ms
+[03:45:49.898] Server  LOG      ✓ Compiled in 115ms
+[03:46:24.420] Server  LOG      ✓ Compiled in 52ms
+[03:46:44.840] Server  LOG      ✓ Compiled in 252ms
+[03:46:58.355] Server  LOG      ✓ Compiled in 39ms
+[03:46:59.594] Server  LOG      ✓ Compiled in 136ms
+[03:47:09.421] Server  LOG      ✓ Compiled in 79ms
+[03:47:20.715] Server  LOG      ✓ Compiled in 62ms
+[03:47:34.862] Server  LOG      ✓ Compiled in 115ms
+[03:47:44.268] Server  LOG      ✓ Compiled in 60ms
+[03:54:56.261] Browser LOG     video http://localhost:8000/api/highlight/7
+[04:08:27.944] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/22c55e/FFF?text=Side+Ad+1" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:08:27.958] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+3" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:08:27.960] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+1" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:08:27.963] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+2" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:08:28.022] Server  ERROR    ⨯ The requested resource "https://placehold.co/800x400?text=Breaking+News" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:08:28.030] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+4" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:08:28.070] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+5" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:08:34.136] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+1" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:08:34.139] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+5" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:08:34.151] Server  ERROR    ⨯ The requested resource "https://placehold.co/800x400?text=Breaking+News" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:08:35.423] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/22c55e/FFF?text=Side+Ad+1" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:08:36.643] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+4" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:08:37.980] Server  ERROR    ⨯ The requested resource "https://placehold.co/400x300?text=News+2" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:08:39.014] Server  ERROR    ⨯ "upstream image response timed out for" "https://placehold.co/400x300?text=News+3"
+[04:08:51.187] Server  ERROR    ⨯ "upstream image response timed out for" "https://placehold.co/800x400?text=Breaking+News"
+[04:08:51.201] Server  ERROR    ⨯ "upstream image response timed out for" "https://placehold.co/400x300?text=News+1"
+[04:08:51.206] Server  ERROR    ⨯ "upstream image response timed out for" "https://placehold.co/400x300?text=News+2"
+[04:08:51.211] Server  ERROR    ⨯ "upstream image response timed out for" "https://placehold.co/400x300?text=News+3"
+[04:08:51.237] Server  ERROR    ⨯ "upstream image response timed out for" "https://placehold.co/400x300?text=News+4"
+[04:08:51.241] Server  ERROR    ⨯ "upstream image response timed out for" "https://placehold.co/400x300?text=News+5"
+[04:08:58.225] Server  ERROR    ⨯ "upstream image response timed out for" "https://placehold.co/300x250/22c55e/FFF?text=Side+Ad+1"
+[04:08:58.260] Server  ERROR    ⨯ "upstream image response timed out for" "https://placehold.co/300x250/eab308/000?text=Side+Ad+2"
+[04:09:04.957] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/22c55e/FFF?text=Side+Ad+1" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:09:05.126] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/eab308/000?text=Side+Ad+2" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:09:09.392] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/eab308/000?text=Side+Ad+2" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:09:14.575] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/22c55e/FFF?text=Side+Ad+1" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:09:19.527] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/eab308/000?text=Side+Ad+2" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:09:24.549] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/22c55e/FFF?text=Side+Ad+1" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:09:29.542] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/eab308/000?text=Side+Ad+2" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:09:34.541] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/22c55e/FFF?text=Side+Ad+1" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:09:39.521] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/eab308/000?text=Side+Ad+2" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:09:44.552] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/22c55e/FFF?text=Side+Ad+1" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:09:49.502] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/eab308/000?text=Side+Ad+2" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:09:54.521] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/22c55e/FFF?text=Side+Ad+1" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:09:59.763] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/eab308/000?text=Side+Ad+2" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:10:04.595] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/22c55e/FFF?text=Side+Ad+1" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:10:09.567] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/eab308/000?text=Side+Ad+2" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:10:14.515] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/22c55e/FFF?text=Side+Ad+1" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:11:02.545] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/eab308/000?text=Side+Ad+2" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:12:02.543] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/22c55e/FFF?text=Side+Ad+1" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:13:02.525] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/eab308/000?text=Side+Ad+2" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:14:02.518] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/22c55e/FFF?text=Side+Ad+1" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:15:02.663] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/eab308/000?text=Side+Ad+2" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:15:38.104] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/22c55e/FFF?text=Side+Ad+1" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:15:39.520] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/eab308/000?text=Side+Ad+2" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:15:44.369] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/22c55e/FFF?text=Side+Ad+1" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:15:49.624] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/eab308/000?text=Side+Ad+2" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:15:54.556] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/22c55e/FFF?text=Side+Ad+1" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:15:59.595] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/eab308/000?text=Side+Ad+2" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:16:05.066] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/22c55e/FFF?text=Side+Ad+1" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:16:09.388] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/eab308/000?text=Side+Ad+2" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:16:14.555] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/22c55e/FFF?text=Side+Ad+1" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:16:20.112] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/eab308/000?text=Side+Ad+2" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:16:24.585] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/22c55e/FFF?text=Side+Ad+1" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:16:29.472] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/eab308/000?text=Side+Ad+2" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:16:34.516] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/22c55e/FFF?text=Side+Ad+1" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:16:39.522] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/eab308/000?text=Side+Ad+2" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:16:44.523] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/22c55e/FFF?text=Side+Ad+1" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:16:49.516] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/eab308/000?text=Side+Ad+2" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:16:54.522] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/22c55e/FFF?text=Side+Ad+1" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:16:59.501] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/eab308/000?text=Side+Ad+2" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:17:04.524] Server  ERROR    ⨯ The requested resource "https://placehold.co/300x250/22c55e/FFF?text=Side+Ad+1" has type "image/svg+xml" but dangerouslyAllowSVG is disabled. Consider adding the "unoptimized" property to the <Image>.
+[04:18:31.281] Server  LOG      ✓ Compiled in 57ms
+[04:25:21.875] Server  LOG      ✓ Compiled in 1519ms
+[04:33:40.490] Server  LOG      ✓ Compiled in 401ms
+[04:35:51.852] Server  LOG      ✓ Compiled in 156ms
+[04:36:19.378] Server  WARN    Error: Route "/news/[slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[04:36:19.492] Server  ERROR    ⨯ Error: Failed to fetch news
+[04:36:19.667] Browser ERROR   uncaughtError: Error: Failed to fetch news
+[04:39:33.550] Server  LOG      ✓ Compiled in 126ms
+[04:39:54.179] Server  LOG      ✓ Compiled in 128ms
+[04:42:38.460] Server  LOG      ✓ Compiled in 158ms
+[04:42:48.393] Server  WARN    Error: Route "/news/[slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[04:42:48.586] Server  ERROR    ⨯ Error: Failed to fetch news
+[04:42:48.765] Browser ERROR   uncaughtError: Error: Failed to fetch news
+[04:44:20.846] Server  LOG      ✓ Compiled in 225ms
+[04:44:21.828] Server  WARN    Error: Route "/news/[slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[04:44:22.351] Server  ERROR    ⨯ Error: Failed to fetch news
+[04:44:25.293] Browser ERROR   uncaughtError: Error: Failed to fetch news
+[04:47:09.018] Server  LOG      ✓ Compiled in 338ms
+[04:47:09.650] Server  WARN    Error: Route "/news/[slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[04:47:10.989] Server  ERROR    ⨯ Error: Failed to fetch news
+[04:47:15.424] Browser ERROR   uncaughtError: Error: Failed to fetch news
+[04:49:44.556] Server  LOG      ✓ Compiled in 1019ms
+[04:49:46.776] Server  WARN    Error: Route "/news/[slug]" used `params.slug`. `params` is a Promise and must be unwrapped with `await` or `React.use()` before accessing its properties. Learn more: https://nextjs.org/docs/messages/sync-dynamic-apis
+[04:49:48.160] Server  ERROR    ⨯ Error: Failed to fetch news
+[04:49:49.739] Browser ERROR   uncaughtError: Error: Failed to fetch news
+[04:52:14.758] Browser ERROR   ./app/news/[slug]/page.tsx:10:11
+Parsing ecmascript source code failed
+   8 |     params: { slug: string };
+   9 | }) {
+> 10 |     const {data,}
+     |           ^^^^^^^
+  11 |     const formattedDate = new Date(data.published_at).toLocaleDateString("en-US", {
+  12 |         year: "numeric",
+  13 |         month: "long",
+
+'const' declarations must be initialized
+[04:56:31.295] Browser ERROR   ./app/news/[slug]/page.tsx:10:11
+Parsing ecmascript source code failed
+   8 |     params: { slug: string };
+   9 | }) {
+> 10 |     const {data,}
+     |           ^^^^^^^
+  11 |     const formattedDate = new Date(data.published_at).toLocaleDateString("en-US", {
+  12 |         year: "numeric",
+  13 |         month: "long",
+
+'const' declarations must be initialized
+[05:00:21.317] Browser ERROR   ./app/news/[slug]/page.tsx:7:16
+Ecmascript file had an error
+   5 | import {useParams} from "next/navigation";
+   6 | import {useNewsBySlug} from "@/app/src/hook/useNewsBySlug";
+>  7 | import React, {useEffect} from "react";
+     |                ^^^^^^^^^
+   8 | import {ENDPOINTS} from "@/app/src/utils/endpoints";
+   9 | import {Loader2} from "lucide-react";
+  10 | import Link from "next/link";
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[05:00:21.322] Browser ERROR   ./app/news/[slug]/page.tsx:5:9
+Ecmascript file had an error
+  3 | import ReactMarkdown from "react-markdown";
+  4 | import {News} from "@/app/src/interface/news.interface";
+> 5 | import {useParams} from "next/navigation";
+    |         ^^^^^^^^^
+  6 | import {useNewsBySlug} from "@/app/src/hook/useNewsBySlug";
+  7 | import React, {useEffect} from "react";
+  8 | import {ENDPOINTS} from "@/app/src/utils/endpoints";
+
+You're importing a component that needs `useParams`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+[05:00:21.323] Browser ERROR   ./app/news/[slug]/page.tsx:6:1
+Export useNewsBySlug doesn't exist in target module
+  4 | import {News} from "@/app/src/interface/news.interface";
+  5 | import {useParams} from "next/navigation";
+> 6 | import {useNewsBySlug} from "@/app/src/hook/useNewsBySlug";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 | import React, {useEffect} from "react";
+  8 | import {ENDPOINTS} from "@/app/src/utils/endpoints";
+  9 | import {Loader2} from "lucide-react";
+
+The export useNewsBySlug was not found in module [project]/app/src/hook/useNewsBySlug.ts [app-rsc] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+[05:01:26.648] Browser ERROR   ./app/news/[slug]/page.tsx:5:1
+Export useNewsBySlug doesn't exist in target module
+  3 | import ReactMarkdown from "react-markdown";
+  4 | import {useParams} from "next/navigation";
+> 5 | import {useNewsBySlug} from "@/app/src/hook/useNewsBySlug";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import React, {useEffect} from "react";
+  7 | import {ENDPOINTS} from "@/app/src/utils/endpoints";
+  8 | import {Loader2} from "lucide-react";
+
+The export useNewsBySlug was not found in module [project]/app/src/hook/useNewsBySlug.ts [app-client] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/news/[slug]/page.tsx [Client Component Browser]
+    ./app/news/[slug]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/news/[slug]/page.tsx [Client Component SSR]
+    ./app/news/[slug]/page.tsx [Server Component]
+[05:01:26.648] Browser ERROR   ./app/news/[slug]/page.tsx:5:1
+Export useNewsBySlug doesn't exist in target module
+  3 | import ReactMarkdown from "react-markdown";
+  4 | import {useParams} from "next/navigation";
+> 5 | import {useNewsBySlug} from "@/app/src/hook/useNewsBySlug";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import React, {useEffect} from "react";
+  7 | import {ENDPOINTS} from "@/app/src/utils/endpoints";
+  8 | import {Loader2} from "lucide-react";
+
+The export useNewsBySlug was not found in module [project]/app/src/hook/useNewsBySlug.ts [app-ssr] (ecmascript).
+The module has no exports at all.
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/news/[slug]/page.tsx [Client Component Browser]
+    ./app/news/[slug]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/news/[slug]/page.tsx [Client Component SSR]
+    ./app/news/[slug]/page.tsx [Server Component]
+[05:01:26.911] Server  LOG      ✓ Compiled in 301ms
+[05:01:31.206] Browser ERROR   uncaughtError: TypeError: Cannot read properties of null (reading 'startsWith')
+[05:03:10.614] Server  LOG      ✓ Compiled in 540ms
+[05:03:10.891] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[05:03:14.299] Browser ERROR   uncaughtError: TypeError: Cannot read properties of null (reading 'startsWith')
+[05:03:25.271] Browser ERROR   uncaughtError: TypeError: Cannot read properties of null (reading 'startsWith')
+[05:04:55.488] Server  WARN     ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[05:04:55.503] Server  LOG      ✓ Compiled in 117ms
+[05:04:59.920] Browser LOG     video http://localhost:8000/api/news/13
+[05:05:00.249] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[05:05:47.433] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[05:05:47.542] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[05:06:47.961] Server  LOG      ✓ Compiled in 145ms
+[05:08:33.325] Server  LOG      ✓ Compiled in 107ms
+[05:08:49.652] Server  LOG      ✓ Compiled in 76ms
+[05:09:19.888] Server  LOG      ✓ Compiled in 54ms
+[05:10:40.526] Server  LOG      ✓ Compiled in 66ms
+[05:10:45.765] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[05:10:45.957] Browser LOG     video http://localhost:8000/api/news/13
+[05:10:46.818] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[05:10:46.898] Browser LOG     video http://localhost:8000/api/news/13
+[05:10:48.627] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[05:10:48.682] Browser LOG     video http://localhost:8000/api/news/13
+[05:10:49.724] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[05:10:49.789] Browser LOG     video http://localhost:8000/api/news/13
+[05:10:50.822] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[05:10:50.859] Browser LOG     video http://localhost:8000/api/news/13
+[05:10:51.730] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[05:10:51.738] Browser LOG     video http://localhost:8000/api/news/13
+[05:10:52.427] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[05:10:52.474] Browser LOG     video http://localhost:8000/api/news/13
+[05:10:53.092] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[05:10:53.145] Browser LOG     video http://localhost:8000/api/news/13
+[05:10:53.700] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[05:10:53.742] Browser LOG     video http://localhost:8000/api/news/13
+[05:11:22.221] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[05:11:22.267] Browser LOG     video http://localhost:8000/api/news/12
+[05:13:43.034] Server  LOG      ✓ Compiled in 444ms
+[05:13:43.293] Browser ERROR   ./app/news/[slug]/page.tsx:5:1
+Parsing ecmascript source code failed
+  3 | import ReactMarkdown from "react-markdown";
+  4 | import re
+> 5 | import {useParams} from "next/navigation";
+    | ^^^^^^
+  6 | import {useNewsBySlug} from "@/app/src/hook/useNewsBySlug";
+  7 | import React, {useEffect} from "react";
+  8 | import {ENDPOINTS} from "@/app/src/utils/endpoints";
+
+Expected ',', got 'import'
+
+Import traces:
+  Client Component Browser:
+    ./app/news/[slug]/page.tsx [Client Component Browser]
+    ./app/news/[slug]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/news/[slug]/page.tsx [Client Component SSR]
+    ./app/news/[slug]/page.tsx [Server Component]
+[05:14:04.309] Browser ERROR   ./app/news/[slug]/page.tsx:5:1
+Parsing ecmascript source code failed
+  3 | import ReactMarkdown from "react-markdown";
+  4 | import re
+> 5 | import {useParams} from "next/navigation";
+    | ^^^^^^
+  6 | import {useNewsBySlug} from "@/app/src/hook/useNewsBySlug";
+  7 | import React, {useEffect} from "react";
+  8 | import {ENDPOINTS} from "@/app/src/utils/endpoints";
+
+Expected ',', got 'import'
+
+Import traces:
+  Client Component Browser:
+    ./app/news/[slug]/page.tsx [Client Component Browser]
+    ./app/news/[slug]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/news/[slug]/page.tsx [Client Component SSR]
+    ./app/news/[slug]/page.tsx [Server Component]
+[05:14:07.494] Browser ERROR   ./app/news/[slug]/page.tsx:5:1
+Parsing ecmascript source code failed
+  3 | import ReactMarkdown from "react-markdown";
+  4 | import re
+> 5 | import {useParams} from "next/navigation";
+    | ^^^^^^
+  6 | import {useNewsBySlug} from "@/app/src/hook/useNewsBySlug";
+  7 | import React, {useEffect} from "react";
+  8 | import {ENDPOINTS} from "@/app/src/utils/endpoints";
+
+Expected ',', got 'import'
+
+Import traces:
+  Client Component Browser:
+    ./app/news/[slug]/page.tsx [Client Component Browser]
+    ./app/news/[slug]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/news/[slug]/page.tsx [Client Component SSR]
+    ./app/news/[slug]/page.tsx [Server Component]
+[05:14:09.652] Browser ERROR   ./app/news/[slug]/page.tsx:5:1
+Parsing ecmascript source code failed
+  3 | import ReactMarkdown from "react-markdown";
+  4 | import re
+> 5 | import {useParams} from "next/navigation";
+    | ^^^^^^
+  6 | import {useNewsBySlug} from "@/app/src/hook/useNewsBySlug";
+  7 | import React, {useEffect} from "react";
+  8 | import {ENDPOINTS} from "@/app/src/utils/endpoints";
+
+Expected ',', got 'import'
+
+Import traces:
+  Client Component Browser:
+    ./app/news/[slug]/page.tsx [Client Component Browser]
+    ./app/news/[slug]/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/news/[slug]/page.tsx [Client Component SSR]
+    ./app/news/[slug]/page.tsx [Server Component]
+[05:14:22.658] Server  LOG      ✓ Compiled in 2.7s
+[05:15:07.700] Browser LOG     video http://localhost:8000/api/news/4
+[05:15:07.722] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[05:15:11.916] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[05:15:12.135] Browser LOG     video http://localhost:8000/api/news/4
+[05:25:36.573] Server  LOG      ✓ Compiled in 1908ms
+[05:25:41.320] Browser LOG     video http://localhost:8000/api/news/4
+[05:25:41.342] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[05:25:43.279] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[05:25:43.313] Browser LOG     video http://localhost:8000/api/news/4
+[05:25:45.765] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[05:25:45.823] Browser LOG     video http://localhost:8000/api/news/4
+[05:25:46.908] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[05:25:46.948] Browser LOG     video http://localhost:8000/api/news/4
+[05:26:25.773] Server  LOG      ✓ Compiled in 801ms
+[05:26:27.907] Browser LOG     video http://localhost:8000/api/news/4
+[05:26:27.913] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[05:26:29.759] Browser LOG     video http://localhost:8000/api/news/4
+[05:26:29.853] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[05:26:30.637] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[05:26:30.682] Browser LOG     video http://localhost:8000/api/news/4
+[05:26:31.750] Browser LOG     video http://localhost:8000/api/news/4
+[05:26:31.756] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[05:26:33.455] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[05:26:33.712] Browser LOG     video http://localhost:8000/api/news/4
+[05:28:41.325] Browser LOG     video http://localhost:8000/api/news/6
+[05:28:41.335] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[05:29:48.974] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[05:29:48.990] Browser LOG     video http://localhost:8000/api/news/6
+[05:38:27.514] Server  LOG      ✓ Compiled in 1507ms
+[05:47:43.268] Browser LOG     video http://localhost:8000/api/news/14
+[05:47:43.287] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[05:47:48.697] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[05:47:48.815] Browser LOG     video http://localhost:8000/api/news/14
+[05:48:26.050] Server  LOG      ✓ Compiled in 541ms
+[06:10:22.458] Browser LOG     video http://localhost:8000/api/highlight/7
+[06:40:50.857] Browser LOG     video http://localhost:8000/api/news/13
+[06:40:51.022] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[06:40:54.114] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[06:40:54.161] Browser LOG     video http://localhost:8000/api/news/12
+[06:40:57.915] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[06:40:57.953] Browser LOG     video http://localhost:8000/api/news/4
+[06:41:14.397] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[06:41:15.099] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[06:42:11.879] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[06:42:12.085] Browser LOG     video http://localhost:8000/api/news/4
+[06:42:33.884] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[06:42:33.999] Browser LOG     video http://localhost:8000/api/news/4
+[06:43:19.312] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[06:43:20.072] Browser LOG     video http://localhost:8000/api/news/4
+[06:44:05.979] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[06:44:06.173] Browser LOG     video http://localhost:8000/api/news/4
+[06:44:28.865] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[06:44:54.986] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[06:44:55.457] Browser LOG     video http://localhost:8000/api/news/4
+[06:46:17.851] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[06:46:18.758] Browser LOG     video http://localhost:8000/api/news/4
+[06:46:56.970] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[06:46:57.034] Browser LOG     video http://localhost:8000/api/news/4
+[06:47:04.766] Browser LOG     video http://localhost:8000/api/news/4
+[06:47:04.999] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[06:47:38.320] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[06:47:38.567] Browser LOG     video http://localhost:8000/api/news/4
+[06:47:41.918] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[06:48:09.206] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[06:48:09.479] Browser LOG     video http://localhost:8000/api/news/4
+[06:50:00.308] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
+[06:50:00.452] Browser LOG     video http://localhost:8000/api/news/4
+[06:52:18.746] Browser LOG     video http://localhost:8000/api/highlight/7
+[06:53:20.026] Server  LOG      ✓ Compiled in 4.2s
+[06:53:26.611] Browser LOG     video http://localhost:8000/api/highlight/7
+[07:04:13.662] Browser LOG     video http://localhost:8000/api/highlight/7
+[07:04:13.662] Browser LOG     [2;38;2;124;124;124m%s[0m video http://localhost:8000/api/highlight/7
+[07:04:19.252] Browser LOG     video http://localhost:8000/api/highlight/7
+[07:05:03.890] Browser LOG     video http://localhost:8000/api/highlight/7
+[07:05:26.267] Browser LOG     video http://localhost:8000/api/highlight/7
+[07:15:59.148] Browser LOG     video http://localhost:8000/api/highlight/7
+[07:17:15.284] Browser LOG     video http://localhost:8000/api/highlight/7
+[07:17:17.876] Browser LOG     video http://localhost:8000/api/highlight/7
+[07:18:33.580] Browser LOG     video http://localhost:8000/api/highlight/7
+[07:18:36.607] Browser LOG     video http://localhost:8000/api/highlight/7
+[07:18:38.996] Browser LOG     video http://localhost:8000/api/highlight/7
+[07:18:41.416] Browser LOG     video http://localhost:8000/api/highlight/7
+[07:20:05.676] Browser LOG     video http://localhost:8000/api/highlight/7
+[07:28:49.459] Browser LOG     video http://localhost:8000/api/highlight/7
+[07:29:41.576] Browser LOG     video http://localhost:8000/api/highlight/7
+[07:29:41.576] Browser LOG     [2;38;2;124;124;124m%s[0m video http://localhost:8000/api/highlight/7
+[07:31:12.485] Server  LOG      ✓ Compiled in 1964ms
+[07:32:09.230] Server  LOG      ✓ Compiled in 1858ms
+[07:33:45.681] Server  LOG      ✓ Compiled in 716ms
+[07:40:53.357] Server  LOG      ✓ Compiled in 578ms
+[07:42:04.252] Browser LOG     video http://localhost:8000/api/news/12
+[07:42:04.329] Server  ERROR    ⨯ "The requested resource isn't a valid image for" "/placeholder.png" "received" null
