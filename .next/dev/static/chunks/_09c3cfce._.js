@@ -6,24 +6,17 @@ __turbopack_context__.s([
     "ENDPOINTS",
     ()=>ENDPOINTS
 ]);
-const BASE_URL = 'http://localhost:8000/api';
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = /*#__PURE__*/ __turbopack_context__.i("[project]/node_modules/next/dist/build/polyfills/process.js [app-client] (ecmascript)");
+const BASE_URL = ("TURBOPACK compile-time value", "http://localhost:8000/api");
 const ENDPOINTS = {
     NEWS: `${BASE_URL}/news`,
     HIGHLIGHT: `${BASE_URL}/highlights`,
     VIEW_HIGHLIGHT: `${BASE_URL}/highlight`,
     BANNER: `${BASE_URL}/banners`,
     CATEGORY: `${BASE_URL}/categories`,
-    LIVE_MATCH: `https://livescore6.p.rapidapi.com/matches/v2/list-live`
-} // Route::get('/news', [NewsController::class, 'index']);
- // Route::get('/news/{slug}', [NewsController::class, 'showBySlug']);
- // Route::get('/highlights', [HighlightController::class, 'index']);
- // Route::get('/highlights/{slug}', [HighlightController::class, 'showBySlug']);
- // Route::get('/categories', [CategoryController::class, 'index']);
- // Route::get('/tags', [TagController::class, 'index']);
- // Route::get('/banners', [BannerController::class, 'index']);
- // Route::post('/news/{news}', [LikeViewController::class, 'storeViewForNews']);
- // Route::post('/highlight/{highlight}', [LikeViewController::class, 'storeViewForHighlight']);
-;
+    LIVE_MATCH: `https://livescore6.p.rapidapi.com/matches/v2/list-live`,
+    IMAGES: ("TURBOPACK compile-time value", "https://pub-64a1f52f8ce34898ad37705d90a1d23b.r2.dev/")
+};
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
@@ -148,11 +141,15 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 
 __turbopack_context__.s([
     "useBanner",
-    ()=>useBanner
+    ()=>useBanner,
+    "useSidebarBanners",
+    ()=>useSidebarBanners
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useQuery$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@tanstack/react-query/build/modern/useQuery.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$src$2f$utils$2f$api$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/app/src/utils/api.ts [app-client] (ecmascript)");
-var _s = __turbopack_context__.k.signature();
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.signature();
+;
 ;
 ;
 const useBanner = ()=>{
@@ -174,6 +171,34 @@ _s(useBanner, "4ZpngI1uv+Uo3WQHEZmTQ5FNM+k=", false, function() {
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$react$2d$query$2f$build$2f$modern$2f$useQuery$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useQuery"]
     ];
 });
+const useSidebarBanners = ()=>{
+    _s1();
+    const { data: banners, ...rest } = useBanner();
+    const sidebarBanners = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useMemo"])({
+        "useSidebarBanners.useMemo[sidebarBanners]": ()=>{
+            return (banners || []).filter({
+                "useSidebarBanners.useMemo[sidebarBanners]": (banner)=>{
+                    if (banner.position !== "sidebar") return false;
+                    const now = new Date();
+                    const start = new Date(banner.start_at);
+                    const end = new Date(banner.end_at);
+                    return now >= start && now <= end;
+                }
+            }["useSidebarBanners.useMemo[sidebarBanners]"]);
+        }
+    }["useSidebarBanners.useMemo[sidebarBanners]"], [
+        banners
+    ]);
+    return {
+        sidebarBanners,
+        ...rest
+    };
+};
+_s1(useSidebarBanners, "wu0ws6XnBkYzBPAFUUShauETYuY=", false, function() {
+    return [
+        useBanner
+    ];
+});
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
@@ -189,9 +214,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$src$2f$hook$2f$useBanner$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/app/src/hook/useBanner.ts [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$src$2f$utils$2f$endpoints$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/app/src/utils/endpoints.ts [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
+;
 ;
 ;
 ;
@@ -227,7 +254,7 @@ function BigBanner() {
         className: "w-full animate-pulse h-[200px] md:h-[400px] bg-gray-300 rounded-xl  my-6"
     }, void 0, false, {
         fileName: "[project]/app/src/components/hero/bigBanner.tsx",
-        lineNumber: 29,
+        lineNumber: 30,
         columnNumber: 27
     }, this);
     if (isError) return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -238,7 +265,7 @@ function BigBanner() {
         ]
     }, void 0, true, {
         fileName: "[project]/app/src/components/hero/bigBanner.tsx",
-        lineNumber: 31,
+        lineNumber: 32,
         columnNumber: 25
     }, this);
     if (!ads || ads.length === 0) return null;
@@ -250,24 +277,24 @@ function BigBanner() {
                 rel: "noopener noreferrer",
                 className: `absolute inset-0 transition-opacity duration-1000 ease-in-out block ${index === current ? "opacity-100 z-10" : "opacity-0 z-0"}`,
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                    src: `https://pub-64a1f52f8ce34898ad37705d90a1d23b.r2.dev/${ad.image_url}`,
+                    src: `${__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$src$2f$utils$2f$endpoints$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ENDPOINTS"].IMAGES}${ad.image_url}`,
                     alt: ad.title,
                     fill: true,
                     loading: "eager",
                     className: "object-cover object-center"
                 }, void 0, false, {
                     fileName: "[project]/app/src/components/hero/bigBanner.tsx",
-                    lineNumber: 47,
+                    lineNumber: 48,
                     columnNumber: 21
                 }, this)
             }, ad.id || index, false, {
                 fileName: "[project]/app/src/components/hero/bigBanner.tsx",
-                lineNumber: 38,
+                lineNumber: 39,
                 columnNumber: 17
             }, this))
     }, void 0, false, {
         fileName: "[project]/app/src/components/hero/bigBanner.tsx",
-        lineNumber: 36,
+        lineNumber: 37,
         columnNumber: 9
     }, this);
 }
@@ -906,9 +933,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$src$2f$utils$2f$agoTime$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/app/src/utils/agoTime.ts [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$src$2f$hook$2f$useNews$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/app/src/hook/useNews.ts [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$src$2f$components$2f$skeleton$2f$newsSkeleton$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/app/src/components/skeleton/newsSkeleton.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$src$2f$utils$2f$endpoints$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/app/src/utils/endpoints.ts [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
+;
 ;
 ;
 ;
@@ -929,7 +958,7 @@ function NewsHero({ is_featured, is_breaking }) {
     }) || [];
     if (isLoading) return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$src$2f$components$2f$skeleton$2f$newsSkeleton$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
         fileName: "[project]/app/src/components/hero/newsHero.tsx",
-        lineNumber: 21,
+        lineNumber: 22,
         columnNumber: 9
     }, this);
     if (isError) return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -940,7 +969,7 @@ function NewsHero({ is_featured, is_breaking }) {
         ]
     }, void 0, true, {
         fileName: "[project]/app/src/components/hero/newsHero.tsx",
-        lineNumber: 23,
+        lineNumber: 24,
         columnNumber: 25
     }, this);
     if (!filteredNews.length) return null;
@@ -968,19 +997,19 @@ function NewsHero({ is_featured, is_breaking }) {
                                     d: "M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
                                 }, void 0, false, {
                                     fileName: "[project]/app/src/components/hero/newsHero.tsx",
-                                    lineNumber: 34,
+                                    lineNumber: 35,
                                     columnNumber: 25
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/src/components/hero/newsHero.tsx",
-                                lineNumber: 33,
+                                lineNumber: 34,
                                 columnNumber: 21
                             }, this),
                             "FUTURE NEWS"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/src/components/hero/newsHero.tsx",
-                        lineNumber: 32,
+                        lineNumber: 33,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1001,24 +1030,24 @@ function NewsHero({ is_featured, is_breaking }) {
                                     d: "M9 5l7 7-7 7"
                                 }, void 0, false, {
                                     fileName: "[project]/app/src/components/hero/newsHero.tsx",
-                                    lineNumber: 41,
+                                    lineNumber: 42,
                                     columnNumber: 25
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/src/components/hero/newsHero.tsx",
-                                lineNumber: 40,
+                                lineNumber: 41,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/src/components/hero/newsHero.tsx",
-                        lineNumber: 38,
+                        lineNumber: 39,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/src/components/hero/newsHero.tsx",
-                lineNumber: 31,
+                lineNumber: 32,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1029,7 +1058,7 @@ function NewsHero({ is_featured, is_breaking }) {
                         className: "relative w-full h-64 lg:h-full rounded-xl overflow-hidden shadow-sm group block",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                src: `https://pub-64a1f52f8ce34898ad37705d90a1d23b.r2.dev/${mainStory.thumbnail_url}`,
+                                src: `${__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$src$2f$utils$2f$endpoints$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ENDPOINTS"].IMAGES}${mainStory.thumbnail_url}`,
                                 alt: mainStory.title,
                                 fill: true,
                                 sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
@@ -1037,14 +1066,14 @@ function NewsHero({ is_featured, is_breaking }) {
                                 className: "object-cover transition-transform duration-500 group-hover:scale-105"
                             }, void 0, false, {
                                 fileName: "[project]/app/src/components/hero/newsHero.tsx",
-                                lineNumber: 52,
+                                lineNumber: 53,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"
                             }, void 0, false, {
                                 fileName: "[project]/app/src/components/hero/newsHero.tsx",
-                                lineNumber: 61,
+                                lineNumber: 62,
                                 columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1055,7 +1084,7 @@ function NewsHero({ is_featured, is_breaking }) {
                                         children: mainStory.category.name
                                     }, void 0, false, {
                                         fileName: "[project]/app/src/components/hero/newsHero.tsx",
-                                        lineNumber: 63,
+                                        lineNumber: 64,
                                         columnNumber: 29
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -1063,7 +1092,7 @@ function NewsHero({ is_featured, is_breaking }) {
                                         children: mainStory.title
                                     }, void 0, false, {
                                         fileName: "[project]/app/src/components/hero/newsHero.tsx",
-                                        lineNumber: 66,
+                                        lineNumber: 67,
                                         columnNumber: 29
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1071,19 +1100,19 @@ function NewsHero({ is_featured, is_breaking }) {
                                         children: new Date(mainStory.published_at).toLocaleDateString()
                                     }, void 0, false, {
                                         fileName: "[project]/app/src/components/hero/newsHero.tsx",
-                                        lineNumber: 69,
+                                        lineNumber: 70,
                                         columnNumber: 29
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/src/components/hero/newsHero.tsx",
-                                lineNumber: 62,
+                                lineNumber: 63,
                                 columnNumber: 25
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/src/components/hero/newsHero.tsx",
-                        lineNumber: 48,
+                        lineNumber: 49,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1096,7 +1125,7 @@ function NewsHero({ is_featured, is_breaking }) {
                                         className: "relative w-32 h-24 flex-shrink-0 rounded-lg overflow-hidden border border-gray-100 group-hover:border-purple-400-200 transition",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                                src: `https://pub-64a1f52f8ce34898ad37705d90a1d23b.r2.dev/${item.thumbnail_url}`,
+                                                src: `${__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$src$2f$utils$2f$endpoints$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ENDPOINTS"].IMAGES}${item.thumbnail_url}`,
                                                 alt: item.title,
                                                 fill: true,
                                                 sizes: "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
@@ -1104,20 +1133,20 @@ function NewsHero({ is_featured, is_breaking }) {
                                                 className: "object-cover group-hover:scale-110 transition-transform duration-700"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/src/components/hero/newsHero.tsx",
-                                                lineNumber: 85,
+                                                lineNumber: 86,
                                                 columnNumber: 33
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/src/components/hero/newsHero.tsx",
-                                                lineNumber: 93,
+                                                lineNumber: 94,
                                                 columnNumber: 33
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/src/components/hero/newsHero.tsx",
-                                        lineNumber: 84,
+                                        lineNumber: 85,
                                         columnNumber: 29
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1128,7 +1157,7 @@ function NewsHero({ is_featured, is_breaking }) {
                                                 children: item.title
                                             }, void 0, false, {
                                                 fileName: "[project]/app/src/components/hero/newsHero.tsx",
-                                                lineNumber: 97,
+                                                lineNumber: 98,
                                                 columnNumber: 33
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1136,7 +1165,7 @@ function NewsHero({ is_featured, is_breaking }) {
                                                 children: item.summary
                                             }, void 0, false, {
                                                 fileName: "[project]/app/src/components/hero/newsHero.tsx",
-                                                lineNumber: 100,
+                                                lineNumber: 101,
                                                 columnNumber: 33
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1147,7 +1176,7 @@ function NewsHero({ is_featured, is_breaking }) {
                                                         children: item.category.name
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/src/components/hero/newsHero.tsx",
-                                                        lineNumber: 104,
+                                                        lineNumber: 105,
                                                         columnNumber: 37
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1155,42 +1184,42 @@ function NewsHero({ is_featured, is_breaking }) {
                                                         children: (0, __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$src$2f$utils$2f$agoTime$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AgoTime"])(item.published_at)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/src/components/hero/newsHero.tsx",
-                                                        lineNumber: 107,
+                                                        lineNumber: 108,
                                                         columnNumber: 37
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/src/components/hero/newsHero.tsx",
-                                                lineNumber: 103,
+                                                lineNumber: 104,
                                                 columnNumber: 33
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/src/components/hero/newsHero.tsx",
-                                        lineNumber: 96,
+                                        lineNumber: 97,
                                         columnNumber: 29
                                     }, this)
                                 ]
                             }, item.id, true, {
                                 fileName: "[project]/app/src/components/hero/newsHero.tsx",
-                                lineNumber: 78,
+                                lineNumber: 79,
                                 columnNumber: 25
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/app/src/components/hero/newsHero.tsx",
-                        lineNumber: 76,
+                        lineNumber: 77,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/src/components/hero/newsHero.tsx",
-                lineNumber: 46,
+                lineNumber: 47,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/src/components/hero/newsHero.tsx",
-        lineNumber: 29,
+        lineNumber: 30,
         columnNumber: 9
     }, this);
 }
@@ -1220,9 +1249,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$play$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__PlayCircle$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/circle-play.js [app-client] (ecmascript) <export default as PlayCircle>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$src$2f$utils$2f$agoTime$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/app/src/utils/agoTime.ts [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$src$2f$utils$2f$endpoints$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/app/src/utils/endpoints.ts [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
+;
 ;
 ;
 ;
@@ -1253,28 +1284,28 @@ const HighlightCard = ({ largeText = false, hidePlayButton = false, Highlight })
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("video", {
                 ref: videoRef,
-                src: `https://pub-64a1f52f8ce34898ad37705d90a1d23b.r2.dev/${Highlight.video_url}`,
+                src: `${__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$src$2f$utils$2f$endpoints$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ENDPOINTS"].IMAGES}${Highlight.video_url}`,
                 className: "absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105",
                 muted: true,
                 loop: true,
                 playsInline: true
             }, void 0, false, {
                 fileName: "[project]/app/src/components/highlightCard.tsx",
-                lineNumber: 40,
+                lineNumber: 41,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"
             }, void 0, false, {
                 fileName: "[project]/app/src/components/highlightCard.tsx",
-                lineNumber: 50,
+                lineNumber: 51,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"
             }, void 0, false, {
                 fileName: "[project]/app/src/components/highlightCard.tsx",
-                lineNumber: 51,
+                lineNumber: 52,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0)),
             !hidePlayButton && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1286,17 +1317,17 @@ const HighlightCard = ({ largeText = false, hidePlayButton = false, Highlight })
                         size: 48
                     }, void 0, false, {
                         fileName: "[project]/app/src/components/highlightCard.tsx",
-                        lineNumber: 61,
+                        lineNumber: 62,
                         columnNumber: 25
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/app/src/components/highlightCard.tsx",
-                    lineNumber: 60,
+                    lineNumber: 61,
                     columnNumber: 21
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/app/src/components/highlightCard.tsx",
-                lineNumber: 55,
+                lineNumber: 56,
                 columnNumber: 17
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1308,7 +1339,7 @@ const HighlightCard = ({ largeText = false, hidePlayButton = false, Highlight })
                             children: Highlight.title
                         }, void 0, false, {
                             fileName: "[project]/app/src/components/highlightCard.tsx",
-                            lineNumber: 68,
+                            lineNumber: 69,
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1322,7 +1353,7 @@ const HighlightCard = ({ largeText = false, hidePlayButton = false, Highlight })
                                             className: "w-3 h-3"
                                         }, void 0, false, {
                                             fileName: "[project]/app/src/components/highlightCard.tsx",
-                                            lineNumber: 78,
+                                            lineNumber: 79,
                                             columnNumber: 29
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         " ",
@@ -1330,14 +1361,14 @@ const HighlightCard = ({ largeText = false, hidePlayButton = false, Highlight })
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/src/components/highlightCard.tsx",
-                                    lineNumber: 77,
+                                    lineNumber: 78,
                                     columnNumber: 25
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     className: "w-1 h-1 rounded-full bg-slate-500"
                                 }, void 0, false, {
                                     fileName: "[project]/app/src/components/highlightCard.tsx",
-                                    lineNumber: 81,
+                                    lineNumber: 82,
                                     columnNumber: 25
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1347,7 +1378,7 @@ const HighlightCard = ({ largeText = false, hidePlayButton = false, Highlight })
                                             className: "w-3 h-3"
                                         }, void 0, false, {
                                             fileName: "[project]/app/src/components/highlightCard.tsx",
-                                            lineNumber: 84,
+                                            lineNumber: 85,
                                             columnNumber: 29
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         " ",
@@ -1355,30 +1386,30 @@ const HighlightCard = ({ largeText = false, hidePlayButton = false, Highlight })
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/src/components/highlightCard.tsx",
-                                    lineNumber: 83,
+                                    lineNumber: 84,
                                     columnNumber: 25
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/src/components/highlightCard.tsx",
-                            lineNumber: 76,
+                            lineNumber: 77,
                             columnNumber: 21
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/src/components/highlightCard.tsx",
-                    lineNumber: 67,
+                    lineNumber: 68,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/app/src/components/highlightCard.tsx",
-                lineNumber: 66,
+                lineNumber: 67,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/app/src/components/highlightCard.tsx",
-        lineNumber: 26,
+        lineNumber: 27,
         columnNumber: 9
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -1548,7 +1579,7 @@ function HighlightHero() {
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 auto-rows-[220px] sm:auto-rows-[250px] md:auto-rows-[350px]",
-                children: highlightArray.slice(0, 6).map((video, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$src$2f$components$2f$highlightCard$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                children: highlightArray.slice(0, 4).map((video, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$app$2f$src$2f$components$2f$highlightCard$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                         hidePlayButton: true,
                         largeText: false,
                         Highlight: {

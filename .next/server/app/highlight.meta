@@ -2,13 +2,14 @@
   "headers": {
     "x-nextjs-stale-time": "300",
     "x-nextjs-prerender": "1",
-    "x-next-cache-tags": "_N_T_/layout,_N_T_/highlight/layout,_N_T_/highlight/page,_N_T_/highlight"
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/(main)/layout,_N_T_/(main)/highlight/layout,_N_T_/(main)/highlight/page,_N_T_/highlight"
   },
   "segmentPaths": [
     "/_tree",
     "/_full",
-    "/highlight/__PAGE__",
-    "/highlight",
+    "/!KG1haW4p/highlight/__PAGE__",
+    "/!KG1haW4p/highlight",
+    "/!KG1haW4p",
     "/_index",
     "/_head"
   ]

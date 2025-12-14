@@ -33,7 +33,18 @@ html,
     --nav-text-color: #6f42c1;
     --nav-text-active: #6f42c1;
 }
-
+body{
+    font-family: 'Noto Sans Khmer', sans-serif;
+}
+@layer utilities {
+    .no-scrollbar::-webkit-scrollbar {
+        @apply hidden;
+    }
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+}
 .site-header {
     position: fixed;
     top: 0;
@@ -57,6 +68,18 @@ html,
     color: var(--lg-text);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
 }
+.header-container-m {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border-radius: 2rem;
+    overflow: hidden;
+    flex: 1 1 auto;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
+    color: var(--lg-text);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+}
 .header-container--rounded {
     border-radius: 3rem;
 }
@@ -65,7 +88,8 @@ html,
 }
 .header-filter,
 .header-overlay,
-.header-specular {
+.header-specular,
+.header-specular-m {
     position: absolute;
     inset: 0;
     border-radius: inherit;
@@ -98,7 +122,11 @@ html,
     gap: 1rem;
     flex-wrap: wrap;
 }
-
+.header-content-m {
+    position: relative;
+    z-index: 3;
+    align-items: center;
+}
 .site-header.is-sticky .header-container {
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
 }
@@ -196,4 +224,9 @@ html,
     .header__mobile-menu-btn {
         display: none;
     }
+}
+
+.rdp {
+  --rdp-accent-color: #4c3b71;
+  --rdp-background-color: #f8f7fb;
 }

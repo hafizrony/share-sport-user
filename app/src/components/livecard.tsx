@@ -19,14 +19,14 @@ export default function LiveCard({
                                      logo2,
                                  }: LiveCardProps) {
     return (
-        <div className="min-w-[280px] bg-white rounded-xl shadow-sm border border-gray-100 p-4 flex-shrink-0 hover:shadow-md transition">
+        <div className="min-w-[280px] bg-white rounded-xl shadow-sm border border-gray-100 p-4 shrink-0 hover:shadow-md transition">
             <div className="flex justify-between text-xs text-gray-500 mb-2">
                 <span>{league}</span>
                 <span className="text-red-500 font-bold animate-pulse">LIVE {minute}</span>
             </div>
             <div className="flex justify-between items-center mb-3">
                 <div className="text-center">
-                    <Image
+                    <img
                         src={logo1}
                         alt={team1}
                         className="w-10 h-10 rounded-full mx-auto mb-1 object-cover"
@@ -40,7 +40,7 @@ export default function LiveCard({
                 <div className="text-xl font-black text-gray-800">{score}</div>
 
                 <div className="text-center">
-                    <Image
+                    <img
                         src={logo2}
                         alt={team2}
                         className="w-10 h-10 rounded-full mx-auto mb-1 object-cover"

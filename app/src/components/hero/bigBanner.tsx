@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import {useBanner} from "@/app/src/hook/useBanner";
 import {Banner} from "@/app/src/interface/banner.interface"
 import Image from "next/image";
+import {ENDPOINTS} from "@/app/src/utils/endpoints";
 
 export default function BigBanner() {
     const [current, setCurrent] = useState(0);
@@ -45,7 +46,7 @@ export default function BigBanner() {
                     }`}
                 >
                     <Image
-                    src={`https://pub-64a1f52f8ce34898ad37705d90a1d23b.r2.dev/${ad.image_url}`}
+                    src={`${ENDPOINTS.IMAGES}${ad.image_url}`}
                     alt={ad.title}
                     fill
                     loading="eager"

@@ -1,13 +1,15 @@
 {
+  "/(main)/highlight/[slug]/page": "app/(main)/highlight/[slug]/page.js",
+  "/(main)/highlight/page": "app/(main)/highlight/page.js",
+  "/(main)/livescore/[id]/page": "app/(main)/livescore/[id]/page.js",
+  "/(main)/livescore/page": "app/(main)/livescore/page.js",
+  "/(main)/livestream/[slug]/page": "app/(main)/livestream/[slug]/page.js",
+  "/(main)/livestream/page": "app/(main)/livestream/page.js",
+  "/(main)/news/[slug]/page": "app/(main)/news/[slug]/page.js",
+  "/(main)/news/page": "app/(main)/news/page.js",
+  "/(main)/page": "app/(main)/page.js",
+  "/(standalone)/standings/page": "app/(standalone)/standings/page.js",
   "/_global-error/page": "app/_global-error/page.js",
   "/_not-found/page": "app/_not-found/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/highlight/[slug]/page": "app/highlight/[slug]/page.js",
-  "/highlight/page": "app/highlight/page.js",
-  "/livescore/page": "app/livescore/page.js",
-  "/livestream/[slug]/page": "app/livestream/[slug]/page.js",
-  "/livestream/page": "app/livestream/page.js",
-  "/news/[slug]/page": "app/news/[slug]/page.js",
-  "/news/page": "app/news/page.js",
-  "/page": "app/page.js"
+  "/favicon.ico/route": "app/favicon.ico/route.js"
 }

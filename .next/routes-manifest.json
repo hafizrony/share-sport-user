@@ -29,6 +29,14 @@
       "namedRegex": "^/highlight/(?<nxtPslug>[^/]+?)(?:/)?$"
     },
     {
+      "page": "/livescore/[id]",
+      "regex": "^/livescore/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/livescore/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
       "page": "/livestream/[slug]",
       "regex": "^/livestream/([^/]+?)(?:/)?$",
       "routeKeys": {
@@ -93,6 +101,12 @@
       "regex": "^/news(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/news(?:/)?$"
+    },
+    {
+      "page": "/standings",
+      "regex": "^/standings(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/standings(?:/)?$"
     }
   ],
   "dataRoutes": [],

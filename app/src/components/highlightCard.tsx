@@ -4,6 +4,7 @@ import { Eye, Calendar, PlayCircle } from "lucide-react";
 import { useRouter } from "next/navigation";
 import {AgoTime} from "@/app/src/utils/agoTime";
 import {Highlight} from "@/app/src/interface/highlight.interface"
+import {ENDPOINTS} from "@/app/src/utils/endpoints";
 interface HighlightCardProps {
     Highlight: Highlight;
     hidePlayButton?: boolean;
@@ -39,7 +40,7 @@ const HighlightCard: React.FC<HighlightCardProps> = ({largeText = false, hidePla
             {/* Video */}
             <video
                 ref={videoRef}
-                src={`https://pub-64a1f52f8ce34898ad37705d90a1d23b.r2.dev/${Highlight.video_url}`}
+                src={`${ENDPOINTS.IMAGES}${Highlight.video_url}`}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 muted
                 loop

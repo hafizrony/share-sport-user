@@ -2,13 +2,14 @@
   "headers": {
     "x-nextjs-stale-time": "300",
     "x-nextjs-prerender": "1",
-    "x-next-cache-tags": "_N_T_/layout,_N_T_/livescore/layout,_N_T_/livescore/page,_N_T_/livescore"
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/(main)/layout,_N_T_/(main)/livescore/layout,_N_T_/(main)/livescore/page,_N_T_/livescore"
   },
   "segmentPaths": [
     "/_tree",
     "/_full",
-    "/livescore/__PAGE__",
-    "/livescore",
+    "/!KG1haW4p/livescore/__PAGE__",
+    "/!KG1haW4p/livescore",
+    "/!KG1haW4p",
     "/_index",
     "/_head"
   ]

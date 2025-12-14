@@ -71,22 +71,6 @@ class ApiService {
             console.log("API Service",e)
         }
     }
-    async fetchLiveMatch()
-    {
-        const url = ENDPOINTS.LIVE_MATCH;
-        try {
-            const response = await fetch(url,{
-                method: 'GET',
-                headers: {
-                    'x-rapidapi-key': '76b6f9472bmshd6c9ad93820dc21p1afd75jsn16871004544f',
-                    'x-rapidapi-host': 'livescore6.p.rapidapi.com'
-                }
-            });
-            return  response.json();
-        } catch (error) {
-            console.error(error);
-        }
-    }
     async fetchCategory()
     {
         const url = ENDPOINTS.CATEGORY;

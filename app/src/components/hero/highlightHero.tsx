@@ -5,9 +5,9 @@ import {useHighlight} from "@/app/src/hook/useHighlight";
 import {Highlight} from "@/app/src/interface/highlight.interface";
 
 export default function HighlightHero() {
-    const {data:highlights, isLoading, isError} = useHighlight();
+    const {data:highlights, isLoading, isError,error} = useHighlight();
     if(isLoading) return null;
-    if(isError) return <div>Error</div>;
+    if(isError) return <div className="w-full h-[200px] md:h-[400px] bg-gray-100 animate-pulse rounded-xl my-6 flex items-center justify-center text-red-500">Error : {error.message}</div>;
     const highlightArray = Array.isArray(highlights) ? highlights : (highlights?.data || []);
     return (
         <section className="w-full my-8">
@@ -31,7 +31,7 @@ export default function HighlightHero() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4
                 auto-rows-[220px] sm:auto-rows-[250px] md:auto-rows-[350px]">
 
-                {highlightArray.slice(0, 6).map((video:Highlight, index:string|number) => (
+                {highlightArray.slice(0, 4).map((video:Highlight, index:string|number) => (
                     <HighlightCard
                         key={index}
                         hidePlayButton={true}

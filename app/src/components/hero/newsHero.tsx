@@ -5,6 +5,7 @@ import Link from "next/link";
 import {AgoTime} from "../../utils/agoTime";
 import {useNews} from "@/app/src/hook/useNews";
 import NewsHeroSkeleton from "@/app/src/components/skeleton/newsSkeleton";
+import {ENDPOINTS} from "@/app/src/utils/endpoints";
 export default function NewsHero({ is_featured, is_breaking }:{ is_featured: boolean ,is_breaking: boolean }) {
     const { data: news, isLoading, isError, error } = useNews();
     const newsArray = Array.isArray(news) ? news : (news?.data || []);
@@ -50,7 +51,7 @@ export default function NewsHero({ is_featured, is_breaking }:{ is_featured: boo
                     className="relative w-full h-64 lg:h-full rounded-xl overflow-hidden shadow-sm group block"
                 >
                     <Image
-                        src={`https://pub-64a1f52f8ce34898ad37705d90a1d23b.r2.dev/${mainStory.thumbnail_url}`}
+                        src={`${ENDPOINTS.IMAGES}${mainStory.thumbnail_url}`}
                         alt={mainStory.title}
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -83,7 +84,7 @@ export default function NewsHero({ is_featured, is_breaking }:{ is_featured: boo
                             {/* Thumbnail Image with Ring Effect */}
                             <div className="relative w-32 h-24 flex-shrink-0 rounded-lg overflow-hidden border border-gray-100 group-hover:border-purple-400-200 transition">
                                 <Image
-                                    src={`https://pub-64a1f52f8ce34898ad37705d90a1d23b.r2.dev/${item.thumbnail_url}`}
+                                    src={`${ENDPOINTS.IMAGES}${item.thumbnail_url}`}
                                     alt={item.title}
                                     fill
                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

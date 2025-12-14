@@ -10,4 +10,5 @@ export interface News{
     published_at: string;
     image_url: string;
     author:{name:string};
+    tags:{name:string,slug:string};
 }

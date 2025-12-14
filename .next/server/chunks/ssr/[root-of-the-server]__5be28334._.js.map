@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../../../app/livestream/%5Bslug%5D/page.tsx"],"sourcesContent":["export default function LivestreamDetail() {\n    return <div>Livestream Detail</div>;\n}"],"names":[],"mappings":"oVAAe,SAAS,IACpB,MAAO,CAAA,EAAA,EAAA,GAAA,EAAC,MAAA,UAAI,qBAChB"}

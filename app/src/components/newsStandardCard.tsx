@@ -2,6 +2,7 @@ import {News} from "@/app/src/interface/news.interface"
 import Link from "next/link"
 import { Calendar,Eye } from "lucide-react";
 import {AgoTime} from "@/app/src/utils/agoTime";
+import {ENDPOINTS} from "@/app/src/utils/endpoints";
 export default function NewsStandardCard({
                                              title,
                                              thumbnail_url,
@@ -28,7 +29,7 @@ export default function NewsStandardCard({
 
                 <div className="relative w-full sm:w-48 md:w-56 shrink-0 aspect-video sm:aspect-auto">
                     <img
-                        src={`https://pub-64a1f52f8ce34898ad37705d90a1d23b.r2.dev/${thumbnail_url}` || "/placeholder.jpg"}
+                        src={`${ENDPOINTS.IMAGES}${thumbnail_url}` || "/placeholder.jpg"}
                         alt={title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
