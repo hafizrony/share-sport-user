@@ -3,6 +3,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "../src/components/navbar";
 import Footer from "../src/components/footer";
+// @ts-ignore
 import "../globals.css";
 import React from "react";
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
@@ -33,7 +34,7 @@ export default function RootLayout({children}: Readonly<{
             className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen bg-gray-50`}
         >
         <Navbar/>
-        <main className="grow container mx-auto px-4  pt-20">
+        <main className="grow container mx-auto px-3 md:px-4  pt-20">
             <QueryClientProvider client={queryClient}>
                 {children}
             </QueryClientProvider>

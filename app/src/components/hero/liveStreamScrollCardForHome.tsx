@@ -27,7 +27,6 @@ export default function LiveStreamScrollCardForHome() {
           Loading
         </div>;
   if (isError) {
-    console.log("ERROR LIVE :", isError);
     return null;
   }
   
@@ -67,7 +66,6 @@ export default function LiveStreamScrollCardForHome() {
     );
   }
 
-  // HAS LIVE MATCH
   return (
     <div className="mb-10">
       <div className="flex justify-between items-center mb-4">

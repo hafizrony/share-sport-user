@@ -3,10 +3,7 @@
 import React, { useEffect, useState, useMemo, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { LiveScoreServices } from '../../(main)/livescore/services/LiveScoreServices'; 
-import { ArrowLeft, Minus } from 'lucide-react';
-import Link from 'next/link';
 
-// --- Interface Definitions ---
 interface TableRow {
   rnk: number;
   Tid: string;
@@ -22,25 +19,18 @@ interface TableRow {
   pts: number;
 }
 
-// 1. We move the main logic into a separate "Content" component
 function StandingsContent() {
+
   const searchParams = useSearchParams();
-  
-  // URL Params
   const ccd = searchParams.get('ccd');
   const scd = searchParams.get('scd');
   const cnm = searchParams.get('cnm') || "";
   const snm = searchParams.get('snm') || "";
-
-  // State
-  const [subTab, setSubTab] = useState<1 | 2 | 3>(1); // 1=Overall, 2=Home, 3=Away
-
-  // Data State
+  const [subTab, setSubTab] = useState<1 | 2 | 3>(1);
   const [standingsData, setStandingsData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  // Fetch Data
   useEffect(() => {
     const fetchData = async () => {
       if (!ccd || !scd) return;
@@ -61,7 +51,6 @@ function StandingsContent() {
     fetchData();
   }, [ccd, scd]);
 
-  // Process Standings Data
   const tableRows = useMemo(() => {
     if (!standingsData || !standingsData.LeagueTable || !standingsData.LeagueTable.L) return [];
     const leagueData = standingsData.LeagueTable.L[0];
@@ -71,7 +60,6 @@ function StandingsContent() {
   }, [standingsData, subTab]);
 
   return (
-    // Fixed overlay to hide global navbar
     <div className="fixed inset-0 w-full h-full bg-[#F8F9FA] overflow-y-auto font-sans container mx-auto px-4 pt-6 pb-6">
           {/* --- League Header Card --- */}
           <div className="bg-[#4c3b71] rounded-xl shadow-sm p-6 mb-6 flex flex-col md:flex-row items-start md:items-center gap-6">
@@ -192,7 +180,6 @@ function StandingsContent() {
   );
 }
 
-// 2. Wrap the component in a Suspense boundary
 export default function StandingsPage() {
   return (
     <Suspense fallback={

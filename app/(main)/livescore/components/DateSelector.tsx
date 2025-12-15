@@ -39,7 +39,7 @@ const DateSelector: React.FC<DateSelectorProps> = ({
   const getApiDate = (d: Date) => dateToApi(d);
 
   return (
-    <div className="bg-white p-4 rounded-xl shadow-sm mb-6 relative">
+    <div className="bg-white p-4 rounded-xl shadow-sm relative">
       <div className="flex items-center justify-between overflow-x-auto no-scrollbar gap-2">
 
         {/* Schedule Button */}
@@ -78,11 +78,11 @@ const DateSelector: React.FC<DateSelectorProps> = ({
         </div>
       </div>
 
-      {/* MODERN POPUP CALENDAR */}
       {open && (
-        <div className="absolute top-full left-0 mt-3 z-50 backdrop-blur-xl bg-white/80 border border-white/40 rounded-2xl shadow-2xl p-4">
+        <div className="absolute top-full w-full md:w-81 left-0 mt-3 z-50 backdrop-blur bg-white/80 border border-white/40 rounded-2xl shadow-2xl p-4">
           <DayPicker
             mode="single"
+            navLayout="around"
             selected={apiToDate(activeDate)}
             onSelect={(date) => {
               if (!date) return;
@@ -91,9 +91,9 @@ const DateSelector: React.FC<DateSelectorProps> = ({
             }}
             modifiersClassNames={{
               selected: "bg-[#4c3b71] text-white rounded-lg",
-              today: "border border-[#4c3b71]",
+              today: "text-[#4c3b71] font-black",
             }}
-            className="text-sm"
+            className="text-sm justify-center flex"
           />
         </div>
       )}

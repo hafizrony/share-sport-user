@@ -1,7 +1,6 @@
 {
-  "/(main)/highlight/page": "app/(main)/highlight/page.js",
+  "/(main)/livescore/[id]/page": "app/(main)/livescore/[id]/page.js",
   "/(main)/livescore/page": "app/(main)/livescore/page.js",
-  "/(main)/livestream/page": "app/(main)/livestream/page.js",
-  "/(main)/news/page": "app/(main)/news/page.js",
-  "/(main)/page": "app/(main)/page.js"
+  "/(main)/page": "app/(main)/page.js",
+  "/(standalone)/standings/page": "app/(standalone)/standings/page.js"
 }

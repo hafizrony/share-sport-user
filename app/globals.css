@@ -45,13 +45,21 @@ body{
         scrollbar-width: none;
     }
 }
+.site-header-m {
+    position: fixed;
+    top: 0;
+    z-index: 50;
+    width: 100%;
+    padding: 0.5rem 0.7rem 0.5rem 0.7rem;
+    background-color: transparent;
+    transition: padding 300ms ease-in-out;
+}
 .site-header {
     position: fixed;
     top: 0;
     z-index: 50;
     width: 100%;
     padding: 1rem 1rem;
-
     background-color: transparent;
     transition: padding 300ms ease-in-out;
 }
@@ -69,14 +77,11 @@ body{
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
 }
 .header-container-m {
-    position: relative;
-    display: flex;
-    align-items: center;
     background: transparent;
     border-radius: 2rem;
     overflow: hidden;
     flex: 1 1 auto;
-    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow:0 -6px 20px rgba(0, 0, 0, 0.15);
     color: var(--lg-text);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
 }
@@ -224,9 +229,4 @@ body{
     .header__mobile-menu-btn {
         display: none;
     }
-}
-
-.rdp {
-  --rdp-accent-color: #4c3b71;
-  --rdp-background-color: #f8f7fb;
 }

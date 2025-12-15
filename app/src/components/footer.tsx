@@ -17,7 +17,7 @@ export default function Footer() {
                     <div className="mt-6 border-t border-gray-700 flex justify-center">
                     </div>
                     <div className="items-center">
-                        <p className="text-sm text-gray-500 justify-center flex mt-4 mb-20 md:mb-0">
+                        <p className="text-sm text-gray-500 justify-center flex mt-4 mb-16 md:mb-0">
                             &copy; {new Date().getFullYear()} Share Sport. All rights reserved.
                         </p>
                     </div>

@@ -26,13 +26,10 @@ export default function VideoDetailPage() {
     const slug = params?.slug as string;
     const { data: video, isLoading, isError } = useHighlightBySlug(slug);
     useEffect(() => {
-        // Only run if we have the video data and a valid ID
         if (video?.id) {
             const countView = async () => {
                 try {
-                    // Construct the URL using the ID: API + / + id + /view (Adjust path as needed)
                     const url = `${ENDPOINTS.VIEW_HIGHLIGHT}/${video.id}`;
-                    console.log("video", url);
                     await fetch(url, {
                         method: 'POST',
                         headers: {

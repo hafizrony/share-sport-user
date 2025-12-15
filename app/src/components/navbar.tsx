@@ -23,12 +23,12 @@ export default function Navbar() {
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
 
-    const headerClass = `site-header ${isSticky ? "is-sticky" : ""}`;
+    const headerClass = `site-header-m ${isSticky ? "is-sticky" : ""}`;
 
     const navLinks = [
         { href: "/", label: "HOME", icon: Home },
         { href: "/livescore", label: "LIVESCORE", icon: Trophy },
-        { href: "/livestream", label: "LIVESTREAM", icon: Tv },
+        // { href: "/livestream", label: "LIVESTREAM", icon: Tv },
         { href: "/news", label: "NEWS", icon: Newspaper },
         { href: "/highlight", label: "HIGHLIGHT", icon: Clapperboard },
     ];
@@ -70,11 +70,9 @@ export default function Navbar() {
                     </div>
                 </div>
             </header>
-
-            {/* --- MOBILE FLOATING DOCK --- */}
-            {/* Changed centering method to 'inset-x-0 mx-auto' for perfect center alignment */}
-            <div className={`fixed bottom-6 inset-x-0 mx-auto w-[92%] max-w-[380px] z-50 lg:hidden header-container--rounded`}>
-                <nav className="relative py-2 header-container--rounded header-specular-m header-overlay header-filter header-content-m px-3 border border-white/30 bg-white/10 backdrop-blur-md">
+            {/* --- MOBILE BOTTOM NAVBAR --- */}
+            <div className={`fixed bottom-1 inset-x-0 mx-auto w-[94%] z-50 lg:hidden header-container--rounded header-container-m`}>
+                <nav className="relative py-2 header-container--rounded header-specular-m header-overlay header-filter header-content-m px-3 border border-white/30 bg-white/10 backdrop-blur">
                     <ul className="flex justify-between items-center px-1">
                         {navLinks.map((link) => {
                             const isActive = pathname === link.href;
@@ -84,9 +82,9 @@ export default function Navbar() {
                                 <li key={link.href}>
                                     <Link
                                         href={link.href}
-                                        className={`flex flex-col items-center justify-center w-12 h-12 rounded-full transition-all duration-300 ${
+                                        className={`flex flex-col items-center justify-center w-22 h-14 rounded-full transition-all duration-300 ${
                                             isActive 
-                                                ? "bg-[#4c3b71] text-white -translate-y-2 shadow-lg shadow-purple-500/30 scale-110" 
+                                                ? "bg-[#4c3b71] text-white shadow-lg shadow-purple-500/30 is-active" 
                                                 : "text-gray-400 hover:text-[#4c3b71]"
                                         }`}
                                     >
@@ -94,11 +92,9 @@ export default function Navbar() {
                                             size={isActive ? 22 : 24} 
                                             strokeWidth={isActive ? 2.5 : 2} 
                                         />
-                                        {!isActive && (
-                                            <span className="text-[9px] font-semibold mt-0.5 tracking-wide uppercase opacity-70">
+                                            <span className="text-[9px] font-semibold mt-0.5 tracking-wide uppercase">
                                                 {link.label === "HOME" ? "HOME" : link.label}
                                             </span>
-                                        )}
                                     </Link>
                                 </li>
                             );

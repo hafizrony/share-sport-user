@@ -5,7 +5,7 @@ import { LiveScoreResponse, Stage } from '../utils/LiveScore.interface';
 interface MatchListProps {
   data: LiveScoreResponse | null;
   selectedLeagueId: string | null;
-  onSelectMatch: (matchId: string) => void; // Changed to receive ID
+  onSelectMatch: (matchId: string) => void;
   activeMatchId: string | null; 
 }
 
