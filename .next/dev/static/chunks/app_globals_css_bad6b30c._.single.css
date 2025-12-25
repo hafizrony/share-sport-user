@@ -859,10 +859,6 @@
     height: calc(var(--spacing) * 16);
   }
 
-  .h-18\.5 {
-    height: calc(var(--spacing) * 18.5);
-  }
-
   .h-20 {
     height: calc(var(--spacing) * 20);
   }
@@ -3208,12 +3204,6 @@
   @media (min-width: 64rem) {
     .lg\:aspect-20\/9 {
       aspect-ratio: 20 / 9;
-    }
-  }
-
-  @media (min-width: 64rem) {
-    .lg\:h-16 {
-      height: calc(var(--spacing) * 16);
     }
   }
 

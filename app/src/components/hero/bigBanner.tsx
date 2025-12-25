@@ -34,42 +34,27 @@ export default function BigBanner() {
     if (!ads || ads.length === 0) return null;
 
     return (
-        <div className="relative w-full h-55 md:h-auto md:max-h-120 md:aspect-video overflow-hidden rounded-xl shadow-lg my-4 md:my-8 group bg-gray-50">
+        <div className="relative w-full overflow-hidden rounded-xl shadow-lg my-4 md:my-8 bg-gray-50">
             {adsFilter.map((ad: { id: number; link_url: string | undefined; image_url: string; title: string; }, index: number) => (
                 <a
-                    key={ad.id || index}
-                    href={ad.link_url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`absolute inset-0 transition-opacity duration-1000 ease-in-out block ${
-                        index === current ? "opacity-100 z-10" : "opacity-0 z-0"
-                    }`}
+                key={ad.id || index}
+                href={ad.link_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`block transition-opacity duration-1000 ease-in-out ${
+                    index === current ? "opacity-100 z-10" : "opacity-0 z-0 absolute inset-0"
+                }`}
                 >
-                    <Image
+                <Image
                     src={`${ENDPOINTS.IMAGES}${ad.image_url}`}
                     alt={ad.title}
-                    fill
+                    width={1920}
+                    height={1080}
+                    className="w-full h-auto rounded-xl"
                     loading="eager"
-                    className="object-cover object-center"
-                    >
-                    </Image>
+                />
                 </a>
             ))}
-
-            {/*{ads.length > 1 && (*/}
-            {/*    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">*/}
-            {/*        {ads.map((_, idx) => (*/}
-            {/*            <button*/}
-            {/*                key={idx}*/}
-            {/*                onClick={() => setCurrent(idx)}*/}
-            {/*                className={`w-3 h-3 rounded-full transition-colors duration-300 ${*/}
-            {/*                    current === idx ? "bg-white scale-110 shadow-md" : "bg-white/50 hover:bg-white/80"*/}
-            {/*                }`}*/}
-            {/*                aria-label={`Go to slide ${idx + 1}`}*/}
-            {/*            />*/}
-            {/*        ))}*/}
-            {/*    </div>*/}
-            {/*)}*/}
         </div>
     );
 }
