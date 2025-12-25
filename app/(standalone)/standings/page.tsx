@@ -3,6 +3,7 @@
 import React, { useEffect, useState, useMemo, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { LiveScoreServices } from '../../(main)/livescore/services/LiveScoreServices'; 
+import Loader from '@/app/src/components/loader';
 
 interface TableRow {
   rnk: number;
@@ -20,16 +21,22 @@ interface TableRow {
 }
 
 function StandingsContent() {
-
   const searchParams = useSearchParams();
   const ccd = searchParams.get('ccd');
   const scd = searchParams.get('scd');
   const cnm = searchParams.get('cnm') || "";
   const snm = searchParams.get('snm') || "";
+
   const [subTab, setSubTab] = useState<1 | 2 | 3>(1);
   const [standingsData, setStandingsData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (cnm && snm) {
+      document.title = `${cnm}: ${snm} - Share Sport`;
+    }
+  }, [cnm, snm]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -52,7 +59,7 @@ function StandingsContent() {
   }, [ccd, scd]);
 
   const tableRows = useMemo(() => {
-    if (!standingsData || !standingsData.LeagueTable || !standingsData.LeagueTable.L) return [];
+    if (!standingsData?.LeagueTable?.L) return [];
     const leagueData = standingsData.LeagueTable.L[0];
     const tables = leagueData.Tables || [];
     const currentTable = tables.find((t: any) => t.LTT === subTab);
@@ -61,7 +68,6 @@ function StandingsContent() {
 
   return (
     <div className="fixed inset-0 w-full h-full bg-[#F8F9FA] overflow-y-auto font-sans container mx-auto px-4 pt-6 pb-6">
-          {/* --- League Header Card --- */}
           <div className="bg-[#4c3b71] rounded-xl shadow-sm p-6 mb-6 flex flex-col md:flex-row items-start md:items-center gap-6">
                <div className="w-16 h-16 rounded-lg flex items-center justify-center p-2">
                    {ccd && (
@@ -86,7 +92,7 @@ function StandingsContent() {
           {/* --- Main Content Area --- */}
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden min-h-[500px]">
             
-            {/* Sub Tabs (Overall/Home/Away) */}
+            {/* Sub Tabs */}
             <div className="flex gap-2 p-4 border-b border-gray-100 bg-gray-50">
                     {[
                     {id: 1, label: 'Overall'}, 
@@ -109,13 +115,9 @@ function StandingsContent() {
 
             {/* Content Body */}
             <div className="p-0">
-                
                 {/* --- LOADING --- */}
                 {loading && (
-                    <div className="p-20 flex flex-col items-center justify-center text-gray-400">
-                        <div className="w-10 h-10 border-4 border-[#4c3b71] border-t-transparent rounded-full animate-spin mb-4"></div>
-                        <span className="text-sm font-bold text-[#2f2151]">Loading Standings...</span>
-                    </div>
+                    <Loader/>
                 )}
 
                 {/* --- ERROR --- */}
@@ -125,8 +127,14 @@ function StandingsContent() {
                     </div>
                 )}
 
+                {!loading && !error && (!standingsData?.LeagueTable?.L) && (
+                    <div className="p-20 text-center text-gray-500 font-bold m-4">
+                        No standings data available for this competition.
+                    </div>
+                )}
+
                 {/* --- STANDINGS TABLE --- */}
-                {!loading && !error && (
+                {!loading && !error && (standingsData?.LeagueTable?.L) && (
                     <div className="overflow-x-auto">
                         <table className="w-full text-sm text-left">
                             <thead className="text-xs text-white uppercase bg-[#4c3b71]">
@@ -176,7 +184,7 @@ function StandingsContent() {
                 )}
             </div>
           </div>
-      </div>
+    </div>
   );
 }
 

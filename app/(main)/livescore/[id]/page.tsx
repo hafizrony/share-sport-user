@@ -15,6 +15,8 @@ import MatchOverview from "../components/MatchOverview";
 export default function MatchDetailPage() {
   const params = useParams();
   const searchParams = useSearchParams();
+  const tH = searchParams.get('hName') || "";
+  const tA = searchParams.get('aName') || "";
   const router = useRouter();
   const matchId = params?.id as string;
 
@@ -42,7 +44,8 @@ export default function MatchDetailPage() {
   const displayScoreA = matchInfo?.Tr2 || heroData.scoreA;
   const displayStatus = matchInfo?.Eps || heroData.status;
   const isMatchLiveOrFinished = displayStatus !== "NS" && displayStatus !== "";
-
+  const isMatchPen = heroData.status=="AP";
+  const isMatchAET = heroData.status=="AET";
   useEffect(() => {
     if (!matchId || matchId === 'undefined') return;
     const fetchAllData = async () => {
@@ -61,14 +64,17 @@ export default function MatchDetailPage() {
         setH2h(h2hRes);
         setScoreboard(scoreboardRes);
       } catch (err) { console.error(err); } 
-      finally { setLoading(false); }
+      finally { setLoading(false);}
     };
     fetchAllData();
   }, [matchId]);
-
+  
+  
   if (loading && !heroData.hName) return <Loader />;
-
+  if(!scoreboard) return ;
   return (
+    <>
+    <header><title>{`${tH} Vs ${tA} - Share Sport`}</title></header>
     <div className="min-h-screen bg-[#F8F9FA] flex flex-col font-sans">
       {/* HEADER */}
       <div className="bg-white text-[#2f2151] pt-6 pb-6 shadow-sm border-b border-gray-200">
@@ -87,7 +93,13 @@ export default function MatchDetailPage() {
                     <div className="text-4xl md:text-5xl font-black tracking-tighter mb-1 text-[#2f2151]">
                         {isMatchLiveOrFinished ? `${displayScoreH} - ${displayScoreA}` : getStartTime(heroData.time)}
                     </div>
-                    <div className="inline-block bg-[#ffce00] text-black text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">{displayStatus}</div>
+                    <div className="inline-block bg-[#ffce00] text-black text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wider">{displayStatus}</div>
+                    <div className="text-10px md:text-18px font-medium tracking-tighter mb-1 text-gray-700">
+                        {isMatchPen?`Pen : ${scoreboard.Trp1||"0"}-${scoreboard.Trp2||"0"}`:""}
+                    </div>
+                    <div className="text-10px md:text-18px font-medium tracking-tighter mb-1 text-gray-700">
+                        {isMatchAET?`FT : ${scoreboard.Tr1OR||"0"}-${scoreboard.Tr2OR||"0"}`:""}
+                    </div>
                 </div>
                 {/* Away */}
                 <div className="flex flex-col items-center gap-2 flex-1">
@@ -127,5 +139,7 @@ export default function MatchDetailPage() {
          )}
       </div>
     </div>
+    </>
+    
   );
 }

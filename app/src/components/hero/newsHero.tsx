@@ -18,17 +18,12 @@ export default function NewsHero({ is_featured, is_breaking }:{ is_featured: boo
         }
         return false;
     }) || [];
-    if (isLoading) return (
-        <NewsHeroSkeleton/>
-    );
     if (isError) return <div className="w-full h-[200px] md:h-[400px] bg-gray-100 animate-pulse rounded-xl my-6 flex items-center justify-center text-red-500">Error : {error.message}</div>;
-    if (!filteredNews.length) return null;
 
     const mainStory = filteredNews[0];
     const subStories = filteredNews.slice(1, 5);
     return (
-        <section className="w-full my-8">
-            {/* Header Section */}
+        <section className="w-full my-4 md:my-8">
             <div className="flex justify-between items-center mb-4">
                 <div className="bg-[#4c3b71] text-white px-4 py-1.5 rounded-md text-sm font-bold flex items-center gap-2 h-10">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -43,9 +38,7 @@ export default function NewsHero({ is_featured, is_breaking }:{ is_featured: boo
                     </svg>
                 </Link>
             </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 h-auto lg:h-[700px]">
-                {/* LEFT: MAIN STORY (Big Card) */}
+            {!isLoading?<div className="grid grid-cols-1 lg:grid-cols-2 gap-6 h-auto lg:h-[700px]">
                 <Link
                     href={`/news/${mainStory.slug}`}
                     className="relative w-full h-64 lg:h-full rounded-xl overflow-hidden shadow-sm group block"
@@ -114,7 +107,8 @@ export default function NewsHero({ is_featured, is_breaking }:{ is_featured: boo
                         </Link>
                     ))}
                 </div>
-            </div>
+            </div>:<NewsHeroSkeleton/>}
+            
         </section>
     );
 }

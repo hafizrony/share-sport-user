@@ -3,7 +3,9 @@ export const getFormattedToday = (): string => {
     const d = new Date();
     return `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}`;
 };
-
+export function getAPEvents(stage: any) {
+    return stage?.Events.filter((event: { Eps: string; })=> event.Eps === "AP");
+}
 export const getMatchDetailUrl = (liveData: any, matchId: string): string | null => {
 
     let foundMatch: any = null;

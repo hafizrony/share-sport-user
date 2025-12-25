@@ -10,7 +10,7 @@ export default function HighlightHero() {
     if(isError) return <div className="w-full h-[200px] md:h-[400px] bg-gray-100 animate-pulse rounded-xl my-6 flex items-center justify-center text-red-500">Error : {error.message}</div>;
     const highlightArray = Array.isArray(highlights) ? highlights : (highlights?.data || []);
     return (
-        <section className="w-full my-8">
+        <section className="w-full my-4 md:my-8">
             <div className="flex justify-between items-center mb-4">
                 <div className="bg-[#4c3b71] text-white px-4 py-1.5 rounded-md text-sm font-bold flex items-center gap-2 h-10">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

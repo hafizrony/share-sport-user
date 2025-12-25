@@ -1,43 +1,6 @@
-[00:00:02.085] Server  LOG      ✓ Ready in 1452ms
-[00:00:07.617] Server  LOG      ○ Compiling /livescore/[id] ...
-[00:00:10.981] Browser LOG     Using cached data for 20251215
-[00:07:11.605] Server  LOG        Reload env: .env.local
-[00:07:12.201] Server  LOG      ✓ Compiled in 501ms
-[00:07:14.642] Server  LOG      ✓ Compiled in 0ms
-[00:07:21.227] Browser LOG     LiveScoreServices - getLiveMatch called 1 times
-[00:07:28.667] Browser LOG     Using cached data for 20251215
-[00:07:28.668] Browser LOG     [2;38;2;124;124;124m%s[0m Using cached data for 20251215
-[00:10:28.197] Server  LOG      ✓ Compiled in 144ms
-[00:11:19.003] Server  LOG      ✓ Compiled in 75ms
-[00:11:19.306] Browser LOG     statList: [{"Att":0,"Cos":5,"Crs":2,"Fls":12,"Gks":4,"Goa":11,"Ofs":2,"Pss":52,"Rcs":0,"Shbl":2,"Shof":2,"Shon":2,"Shwd":0,"Ths":28,"Tnb":1,"Xg":1.36,"YRcs":0,"Ycs":3},{"Att":0,"Cos":7,"Crs":2,"Fls":13,"Gks":1,"Goa":7,"Ofs":0,"Pss":48,"Rcs":0,"Shbl":2,"Shof":5,"Shon":6,"Shwd":0,"Ths":16,"Tnb":2,"Xg":1.83,"YRcs":0,"Ycs":1}]
-[00:11:19.306] Browser LOG     [2;38;2;124;124;124m%s[0m statList: [{"Att":0,"Cos":5,"Crs":2,"Fls":12,"Gks":4,"Goa":11,"Ofs":2,"Pss":52,"Rcs":0,"Shbl":2,"Shof":2,"Shon":2,"Shwd":0,"Ths":28,"Tnb":1,"Xg":1.36,"YRcs":0,"Ycs":3},{"Att":0,"Cos":7,"Crs":2,"Fls":13,"Gks":1,"Goa":7,"Ofs":0,"Pss":48,"Rcs":0,"Shbl":2,"Shof":5,"Shon":6,"Shwd":0,"Ths":16,"Tnb":2,"Xg":1.83,"YRcs":0,"Ycs":1}]
-[00:11:47.392] Server  LOG      ✓ Compiled in 74ms
-[00:11:47.559] Browser LOG     statList: [{"Att":0,"Cos":5,"Crs":2,"Fls":12,"Gks":4,"Goa":11,"Ofs":2,"Pss":52,"Rcs":0,"Shbl":2,"Shof":2,"Shon":2,"Shwd":0,"Ths":28,"Tnb":1,"Xg":1.36,"YRcs":0,"Ycs":3},{"Att":0,"Cos":7,"Crs":2,"Fls":13,"Gks":1,"Goa":7,"Ofs":0,"Pss":48,"Rcs":0,"Shbl":2,"Shof":5,"Shon":6,"Shwd":0,"Ths":16,"Tnb":2,"Xg":1.83,"YRcs":0,"Ycs":1}]
-[00:11:47.559] Browser LOG     [2;38;2;124;124;124m%s[0m statList: [{"Att":0,"Cos":5,"Crs":2,"Fls":12,"Gks":4,"Goa":11,"Ofs":2,"Pss":52,"Rcs":0,"Shbl":2,"Shof":2,"Shon":2,"Shwd":0,"Ths":28,"Tnb":1,"Xg":1.36,"YRcs":0,"Ycs":3},{"Att":0,"Cos":7,"Crs":2,"Fls":13,"Gks":1,"Goa":7,"Ofs":0,"Pss":48,"Rcs":0,"Shbl":2,"Shof":5,"Shon":6,"Shwd":0,"Ths":16,"Tnb":2,"Xg":1.83,"YRcs":0,"Ycs":1}]
-[00:12:14.507] Server  LOG      ✓ Compiled in 70ms
-[00:12:15.069] Browser LOG     statList: [{"Att":0,"Cos":5,"Crs":2,"Fls":12,"Gks":4,"Goa":11,"Ofs":2,"Pss":52,"Rcs":0,"Shbl":2,"Shof":2,"Shon":2,"Shwd":0,"Ths":28,"Tnb":1,"Xg":1.36,"YRcs":0,"Ycs":3},{"Att":0,"Cos":7,"Crs":2,"Fls":13,"Gks":1,"Goa":7,"Ofs":0,"Pss":48,"Rcs":0,"Shbl":2,"Shof":5,"Shon":6,"Shwd":0,"Ths":16,"Tnb":2,"Xg":1.83,"YRcs":0,"Ycs":1}]
-[00:12:15.069] Browser LOG     [2;38;2;124;124;124m%s[0m statList: [{"Att":0,"Cos":5,"Crs":2,"Fls":12,"Gks":4,"Goa":11,"Ofs":2,"Pss":52,"Rcs":0,"Shbl":2,"Shof":2,"Shon":2,"Shwd":0,"Ths":28,"Tnb":1,"Xg":1.36,"YRcs":0,"Ycs":3},{"Att":0,"Cos":7,"Crs":2,"Fls":13,"Gks":1,"Goa":7,"Ofs":0,"Pss":48,"Rcs":0,"Shbl":2,"Shof":5,"Shon":6,"Shwd":0,"Ths":16,"Tnb":2,"Xg":1.83,"YRcs":0,"Ycs":1}]
-[00:13:24.772] Server  LOG      ✓ Compiled in 81ms
-[00:13:24.968] Browser LOG     statList: [{"Att":0,"Cos":5,"Crs":2,"Fls":12,"Gks":4,"Goa":11,"Ofs":2,"Pss":52,"Rcs":0,"Shbl":2,"Shof":2,"Shon":2,"Shwd":0,"Ths":28,"Tnb":1,"Xg":1.36,"YRcs":0,"Ycs":3},{"Att":0,"Cos":7,"Crs":2,"Fls":13,"Gks":1,"Goa":7,"Ofs":0,"Pss":48,"Rcs":0,"Shbl":2,"Shof":5,"Shon":6,"Shwd":0,"Ths":16,"Tnb":2,"Xg":1.83,"YRcs":0,"Ycs":1}]
-[00:13:24.968] Browser LOG     [2;38;2;124;124;124m%s[0m statList: [{"Att":0,"Cos":5,"Crs":2,"Fls":12,"Gks":4,"Goa":11,"Ofs":2,"Pss":52,"Rcs":0,"Shbl":2,"Shof":2,"Shon":2,"Shwd":0,"Ths":28,"Tnb":1,"Xg":1.36,"YRcs":0,"Ycs":3},{"Att":0,"Cos":7,"Crs":2,"Fls":13,"Gks":1,"Goa":7,"Ofs":0,"Pss":48,"Rcs":0,"Shbl":2,"Shof":5,"Shon":6,"Shwd":0,"Ths":16,"Tnb":2,"Xg":1.83,"YRcs":0,"Ycs":1}]
-[00:15:55.116] Server  LOG      ✓ Compiled in 78ms
-[00:17:53.156] Server  LOG      ✓ Compiled in 445ms
-[00:18:15.998] Server  LOG      ✓ Compiled in 71ms
-[00:18:59.884] Server  LOG      ✓ Compiled in 88ms
-[00:19:25.363] Server  LOG      ✓ Compiled in 120ms
-[00:19:54.984] Server  LOG      ✓ Compiled in 90ms
-[00:20:06.579] Server  LOG      ✓ Compiled in 68ms
-[00:20:33.031] Server  LOG      ✓ Compiled in 62ms
-[00:22:09.748] Server  LOG      ✓ Compiled in 196ms
-[00:22:13.876] Server  LOG      ✓ Compiled in 100ms
-[00:23:03.726] Browser LOG     Using cached data for 20251215
-[00:23:03.726] Browser LOG     [2;38;2;124;124;124m%s[0m Using cached data for 20251215
-[00:24:18.728] Server  LOG      ✓ Compiled in 50ms
-[00:24:26.657] Server  LOG      ✓ Compiled in 53ms
-[00:25:07.956] Server  WARN     ⚠ Cross origin request detected from 192.168.100.53 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
-Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
-[00:31:45.193] Server  LOG      ✓ Compiled in 206ms
-[00:31:47.245] Server  LOG      ✓ Compiled in 131ms
-[00:31:54.413] Server  LOG      ✓ Compiled in 332ms
-[00:31:57.189] Server  LOG      ✓ Compiled in 89ms
-[00:32:01.427] Server  LOG      ✓ Compiled in 78ms
+[00:00:02.126] Server  LOG      ✓ Ready in 1483ms
+[00:00:46.585] Server  LOG      ✓ Compiled in 138ms
+[00:01:46.093] Server  LOG      ✓ Compiled in 111ms
+[00:02:28.393] Server  LOG      ✓ Compiled in 89ms
+[00:02:47.508] Server  LOG      ✓ Compiled in 117ms
+[00:03:06.086] Server  LOG      ✓ Compiled in 50ms

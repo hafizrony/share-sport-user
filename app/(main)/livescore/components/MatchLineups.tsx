@@ -94,9 +94,26 @@ export default function MatchLineups({ lineups, heroData }: any) {
             {/* Pitch */}
             <div className="relative w-full aspect-9/16 lg:aspect-20/9 bg-[#3a8d4a] overflow-hidden group">
                 <div className="absolute inset-0">
+                    {/* Grass Pattern */}
                     <div className="absolute inset-0 opacity-20 bg-[linear-gradient(90deg,transparent_50%,rgba(0,0,0,0.1)_50%)] bg-size-[10%_100%]"></div>
+                    <div className="absolute inset-0 opacity-10 bg-[linear-gradient(0deg,transparent_50%,rgba(0,0,0,0.1)_50%)] bg-size-[100%_10%]"></div>
+                    {/* Outer Border */}
                     <div className="absolute inset-4 border-2 border-white/70 rounded-sm"></div>
+                    {/* --- DESKTOP LINES (Hidden on Mobile) --- */}
+                    {/* Center Line Vertical */}
                     <div className="hidden lg:block absolute top-0 bottom-0 left-1/2 w-0.5 bg-white/70 -translate-x-1/2"></div>
+                    {/* Left Goal Area */}
+                    <div className="hidden lg:block absolute top-1/2 left-4 -translate-y-1/2 w-16 h-32 border-r-2 border-y-2 border-white/70"></div>
+                    {/* Right Goal Area */}
+                    <div className="hidden lg:block absolute top-1/2 right-4 -translate-y-1/2 w-16 h-32 border-l-2 border-y-2 border-white/70"></div>
+                    {/* --- MOBILE LINES (Hidden on Desktop) --- */}
+                    {/* Center Line Horizontal */}
+                    <div className="block lg:hidden absolute top-1/2 left-0 right-0 h-0.5 bg-white/70 -translate-y-1/2"></div>
+                    {/* Top Goal Area (Home) */}
+                    <div className="block lg:hidden absolute top-4 left-1/2 -translate-x-1/2 w-32 h-14 border-b-2 border-x-2 border-white/70"></div>
+                    {/* Bottom Goal Area (Away) */}
+                    <div className="block lg:hidden absolute bottom-4 left-1/2 -translate-x-1/2 w-32 h-14 border-t-2 border-x-2 border-white/70"></div>
+                    {/* Center Circle */}
                     <div className="absolute top-1/2 left-1/2 w-20 h-20 md:w-24 md:h-24 border-2 border-white/70 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
                 </div>
                 

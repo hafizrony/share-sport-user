@@ -78,8 +78,9 @@ export default function NewsPage() {
     const hasMore = filteredNews.length > visibleCount;
 
     return (
+        <><header><title>News - Share Sport</title></header>
         <div className="min-h-screen bg-[#F8F9FA] font-sans text-slate-800">
-            <div className="w-full py-8 flex flex-col lg:flex-row gap-6">
+            <div className="w-full py-4 md:py-8 flex flex-col lg:flex-row gap-6">
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 w-full">
 
@@ -91,7 +92,7 @@ export default function NewsPage() {
                                 <li>
                                     <button
                                         onClick={() => setSelectedCategory("all")}
-                                        className={`w-full text-left px-3 py-2 rounded-md text-sm transition-colors flex justify-between items-center ${
+                                        className={`w-full text-left px-3 py-2 rounded-md text-sm transition-colors flex justify-between items-center cursor-pointer ${
                                             selectedCategory === "all"
                                                 ? "bg-[#4c3b71] text-white"
                                                 : "hover:bg-gray-100 text-gray-700"
@@ -105,7 +106,7 @@ export default function NewsPage() {
                                     <li key={cat.id || cat.slug}>
                                         <button
                                             onClick={() => setSelectedCategory(cat.slug)}
-                                            className={`w-full text-left px-3 py-2 rounded-md text-sm transition-colors flex justify-between items-center ${
+                                            className={`w-full text-left px-3 py-2 rounded-md text-sm transition-colors flex justify-between items-center cursor-pointer ${
                                                 selectedCategory === cat.slug
                                                     ? "bg-[#4c3b71] text-white"
                                                     : "hover:bg-gray-100 text-gray-700"
@@ -123,7 +124,7 @@ export default function NewsPage() {
                     {/* --- CENTER: NEWS CONTENT --- */}
                     <div className={showRightSidebar ? "lg:col-span-8" : "lg:col-span-10"}>
 
-                        {/* Mobile Header (Original) */}
+                        {/* Mobile Header */}
                         <div className="lg:hidden mb-4 flex flex-col gap-4">
                             <div className="flex items-center gap-3">
                                 <div className="bg-[#4c3b71] text-white px-3 py-2 rounded-md text-xs font-bold flex items-center gap-1 shrink-0 shadow-sm whitespace-nowrap">
@@ -170,7 +171,7 @@ export default function NewsPage() {
                             </div>
                         </div>
 
-                        {/* Desktop Header (Original) */}
+                        {/* Desktop Header */}
                         <div className="hidden lg:flex flex-col sm:flex-row sm:items-center justify-between mb-6 gap-4">
                             <div className="bg-[#4c3b71] text-white px-4 py-2 rounded-md text-sm font-bold flex items-center gap-2 w-fit shadow-sm">
                                 <Newspaper className="h-4 w-4" />
@@ -273,7 +274,7 @@ export default function NewsPage() {
 
                                     {/* 3. LOAD MORE BUTTON */}
                                     {hasMore && (
-                                        <div className="flex justify-center pt-4 pb-8">
+                                        <div className="flex justify-center ">
                                             <button
                                                 onClick={() => setVisibleCount(prev => prev + 5)}
                                                 className="bg-white border border-gray-300 text-gray-600 px-8 py-3 rounded-full text-sm font-semibold hover:bg-gray-50 hover:border-[#4c3b71] hover:text-[#4c3b71] transition-all shadow-sm flex items-center gap-2 group"
@@ -345,5 +346,6 @@ export default function NewsPage() {
                 </div>
             </div>
         </div>
+        </>
     );
 }

@@ -44,12 +44,12 @@ export default function Navbar() {
                     <div className="header-content relative">
                         <Link href="/" className="header__logo">
                             <Image
-                                src="https://sharesport.news/logo/1675071036-logo.jpg"
+                                src="/icons/1675071036-logo.jpg"
                                 alt="Share Sports Logo"
-                                width={40}
-                                height={40}
+                                width={45}
+                                height={45}
                             />
-                            <h2>Share Sport</h2>
+                            <span>Share Sport</span>
                         </Link>
                         
                         <div className="header__nav-wrapper">
@@ -84,7 +84,7 @@ export default function Navbar() {
                                         href={link.href}
                                         className={`flex flex-col items-center justify-center w-22 h-14 rounded-full transition-all duration-300 ${
                                             isActive 
-                                                ? "bg-[#4c3b71] text-white shadow-lg shadow-purple-500/30 is-active" 
+                                                ? "text-[#4c3b71] shadow-lg shadow-m is-active" 
                                                 : "text-gray-400 hover:text-[#4c3b71]"
                                         }`}
                                     >

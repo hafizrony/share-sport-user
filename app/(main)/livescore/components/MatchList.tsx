@@ -1,6 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
 import { LiveScoreResponse, Stage } from '../utils/LiveScore.interface';
+import { getAPEvents } from '../helper/livescoreHelper';
+import { CheckCircle } from 'lucide-react';
+import MatchListSkeleton from "./SkeletonLoading";
 
 interface MatchListProps {
   data: LiveScoreResponse | null;
@@ -29,9 +32,7 @@ const MatchList: React.FC<MatchListProps> = ({ data, selectedLeagueId, onSelectM
 
   if (!data || !data.Stages || data.Stages.length === 0) {
     return (
-        <div className="flex flex-col items-center justify-center py-20 bg-white rounded-lg shadow-sm">
-            <p className="text-gray-500 text-lg">No matches scheduled for this date.</p>
-        </div>
+        <MatchListSkeleton/>
     );
   }
 
@@ -82,13 +83,21 @@ const MatchList: React.FC<MatchListProps> = ({ data, selectedLeagueId, onSelectM
             <div className="divide-y divide-gray-100">
                 {stage.Events.map((event) => {
                     const displayStatus = getMatchStatus(event.Eps, event.Esd);
-                    const isLive = ['1H', '2H', 'HT', 'ET', 'P'].includes(event.Eps);
+                    const isLive =/^\d+[`']$/.test(event.Eps) && parseInt(event.Eps) <= 90 ||['1H', '2H', 'HT', 'ET', 'P'].includes(event.Eps);
                     const isFinished = ['FT', 'AET', 'AP'].includes(event.Eps);
-
+                    const isPenalty = displayStatus === "AP";
+                    const AP = getAPEvents(stage);
+                    let hwin = false;
+                    let awin = false;
+                    if(isPenalty){
+                      const trp1 = Number(AP?.[0].Trp1);
+                      const trp2 = Number(AP?.[0].Trp2);
+                      trp1>trp2?hwin=true:awin=true;
+                    }
                     return (
                         <div 
                             key={event.Eid} 
-                            onClick={() => onSelectMatch(event.Eid)} // Pass ID Only
+                            onClick={() => onSelectMatch(event.Eid)}
                             className={`flex items-center p-4 cursor-pointer transition-all border-l-4 hover:bg-gray-50 border-transparent`}>
                             
                             <div className="w-10 flex flex-col justify-center text-left mr-4">
@@ -106,13 +115,13 @@ const MatchList: React.FC<MatchListProps> = ({ data, selectedLeagueId, onSelectM
                                           alt={event.T1[0]?.Nm} 
                                           onError={(e) => {e.currentTarget.src = '/icons/null.png'}}
                                         />
-                                        <span className="font-medium text-sm text-gray-800">
+                                        <span className="font-medium col-1 flex text-sm text-gray-800 items-center">
                                             {event.T1[0]?.Nm}
+                                            {hwin?<CheckCircle size={15} color='green' className='pl-1'/>:""}
                                         </span>
                                     </div>
                                     <span className="font-bold text-gray-900 text-sm">{event.Tr1 ?? ''}</span>
                                 </div>
-
                                 <div className="flex items-center justify-between">
                                     <div className="flex items-center gap-3">
                                         <img 
@@ -121,8 +130,9 @@ const MatchList: React.FC<MatchListProps> = ({ data, selectedLeagueId, onSelectM
                                           alt={event.T2[0]?.Nm}
                                           onError={(e) => {e.currentTarget.src = '/icons/null.png'}}
                                         />
-                                        <span className="font-medium text-sm text-gray-800">
+                                        <span className="font-medium col-1 flex items-center text-sm text-gray-800">
                                             {event.T2[0]?.Nm}
+                                            {awin?<CheckCircle size={15} color='green' className='pl-1'/>:""}
                                         </span>
                                     </div>
                                     <span className="font-bold text-gray-900 text-sm">{event.Tr2 ?? ''}</span>

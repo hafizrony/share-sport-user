@@ -85,6 +85,10 @@ body{
     color: var(--lg-text);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
 }
+.shadow-m{
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px, rgb(255, 255, 255) 1px 1px 1px inset;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5));
+}
 .header-container--rounded {
     border-radius: 3rem;
 }
@@ -126,21 +130,24 @@ body{
     padding: 12px 28px;
     gap: 1rem;
     flex-wrap: wrap;
+    height: 74px;
 }
 .header-content-m {
     position: relative;
     z-index: 3;
     align-items: center;
+    height: 74px;
 }
 .site-header.is-sticky .header-container {
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
 }
 
 .header__logo {
-    font-size: 1.25rem;
-    font-weight: 700;
+    font-size: 1.5rem;
+    font-weight: 800;
     text-decoration: none;
     display: flex;
+    margin-left: -10px;
     align-items: center;
     gap: 0.5rem;
     color: var(--nav-text-color);

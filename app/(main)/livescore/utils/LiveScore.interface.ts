@@ -23,6 +23,8 @@ export interface MatchEvent {
   T2: Team[];
   Tr1?: string; // Score Team 1
   Tr2?: string; // Score Team 2
+  Trp1?:string;
+  Trp2?:string;
 }
 
 export interface Stage {
@@ -64,4 +66,43 @@ export interface TeamDetail {
   Img: string;
   Abr: string;
   CoNm?: string;
+}
+
+export interface Scoreboard {
+  Eid: string;
+  Tr1: string;
+  Tr2: string;
+  Tr1ET: string;
+  Tr2ET: string;
+  Trh1: string;
+  Trh2: string;
+  Tr1OR: string;
+  Tr2OR: string;
+  Incs: Incs;
+}
+
+export interface Incs {
+  "1"?: MatchIncident[];
+  "2"?: MatchIncident[];
+  "3"?: MatchIncident[];
+  "4"?: MatchIncident[];
+}
+
+export interface MatchIncident {
+  Min: number;
+  MinEx?: number;
+  Nm: number;
+  PosA: number;
+  Aid: string;
+  ID: string;
+  Fn: string;
+  Ln: string;
+  Snm?: string;
+  Pnt: string;
+  Pnum: number;
+  Pn: string;
+  PnumO: number;
+  IT: number;
+  Sc: number[];
+  Sor: number;
 }

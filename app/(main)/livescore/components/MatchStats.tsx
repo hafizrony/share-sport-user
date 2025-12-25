@@ -2,7 +2,6 @@
 
 export default function MatchStats({ stats }: any) {
     const selectedKeys: Record<string, string> = {
-        Xg: "Expected Goals",
         Pss: "Possession (%)", Shon: "Shots on target", Shof: "Shots off target",
         Cos: "Corner Kicks", Fls: "Fouls", Ycs: "Yellow cards", YRcs: "Red cards", Ofs: "Offsides",
     };

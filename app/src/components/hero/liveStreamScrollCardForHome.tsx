@@ -42,7 +42,7 @@ export default function LiveStreamScrollCardForHome() {
 
   if (matches.length === 0) {
     return (
-      <div className="mb-10">
+      <div>
         <div className="flex justify-between items-center mb-4">
           <div className="bg-[#4c3b71] text-white px-4 py-1.5 rounded-md text-sm font-bold flex items-center gap-2 h-10">
             <div className="relative w-8 h-8">
@@ -67,7 +67,7 @@ export default function LiveStreamScrollCardForHome() {
   }
 
   return (
-    <div className="mb-10">
+    <div>
       <div className="flex justify-between items-center mb-4">
         <div className="bg-[#4c3b71] text-white px-4 py-1.5 rounded-md text-sm font-bold flex items-center gap-2 h-10">
           <div className="relative w-8 h-8">
@@ -85,7 +85,7 @@ export default function LiveStreamScrollCardForHome() {
       </div>
 
       {/* Smooth Horizontal Scroll */}
-      <div className="flex gap-4 overflow-x-auto scroll-smooth pb-4 snap-x snap-mandatory scrollbar-hide">
+      <div className="flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide">
         {matches.map((match) => (
           <div key={match.Eid} className="snap-start shrink-0">
             <LiveCard

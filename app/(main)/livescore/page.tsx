@@ -9,6 +9,7 @@ import DateSelector from './components/DateSelector';
 import MatchList from './components/MatchList';
 import { Banner } from "@/app/src/interface/banner.interface";
 import { getFormattedToday, getMatchDetailUrl } from "./helper/livescoreHelper"; 
+import MatchListSkeleton from "./components/SkeletonLoading";
 
 export default function LivescorePage() {
     const router = useRouter(); 
@@ -16,17 +17,17 @@ export default function LivescorePage() {
     const [selectedLeagueId, setSelectedLeagueId] = useState<string | null>(null);
     const { data: liveData, loading: isMatchLoading, error } = useLiveScore(activeDate);
     const { sidebarBanners, isLoading: isBannerLoading } = useSidebarBanners();
-    if (isMatchLoading || isBannerLoading) return <Loader />;
     if (error) return <div className="text-center py-10 text-red-500">Error loading scores.</div>;
-    const showRightSidebar = sidebarBanners && sidebarBanners.length > 0;
+    const showRightSidebar = isBannerLoading || (sidebarBanners && sidebarBanners.length > 0);
     const handleMatchClick = (id: string) => {
         const url = getMatchDetailUrl(liveData, id);
         if (url) {
             router.push(url);
         }
     };
-
     return (
+        <>
+        <header><title>Live Score - Share Sport</title></header>
         <div className="min-h-screen bg-[#F8F9FA] font-sans text-slate-800 relative">
             <div className="w-full py-2 md:py-8 container mx-auto md:px-4 max-w-[1600px]">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 w-full items-start">
@@ -35,13 +36,19 @@ export default function LivescorePage() {
                             activeDate={activeDate}
                             onDateChange={(date) => setActiveDate(date)}
                         />
-
-                        <MatchList
-                            data={liveData}
-                            selectedLeagueId={selectedLeagueId}
-                            onSelectMatch={handleMatchClick}
-                            activeMatchId={null} 
-                        />
+                        {isMatchLoading? (
+                            <div className="mt-2">
+                                <MatchListSkeleton />
+                                <MatchListSkeleton />
+                            </div>
+                        ) : (
+                            <MatchList
+                                data={liveData}
+                                selectedLeagueId={selectedLeagueId}
+                                onSelectMatch={handleMatchClick}
+                                activeMatchId={null} 
+                            />
+                        )}
                     </div>
 
                     {showRightSidebar && (
@@ -66,5 +73,6 @@ export default function LivescorePage() {
                 </div>
             </div>
         </div>
+        </>
     );
 }

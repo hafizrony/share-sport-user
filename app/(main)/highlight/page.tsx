@@ -54,8 +54,9 @@ export default function HighlightPage() {
     const showRightSidebar = sidebarBanners.length > 0;
 
     return (
+        <><header><title>Highlight - Share Sport</title></header>
         <div className="min-h-screen bg-[#F8F9FA] font-sans text-slate-800">
-            <div className="w-full py-8 flex flex-col lg:flex-row gap-6">
+            <div className="w-full py-4 md:py-8 flex flex-col lg:flex-row gap-6">
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 w-full">
 
@@ -67,7 +68,7 @@ export default function HighlightPage() {
                                 <li>
                                     <button
                                         onClick={() => { setSelectedCategory("all"); setVisibleCount(6); }}
-                                        className={`w-full text-left px-3 py-2 rounded-md text-sm transition-colors flex justify-between items-center ${
+                                        className={`w-full text-left px-3 py-2 rounded-md text-sm transition-colors flex justify-between items-center cursor-pointer ${
                                             selectedCategory === "all"
                                                 ? "bg-[#4c3b71] text-white"
                                                 : "hover:bg-gray-100 text-gray-700"
@@ -81,7 +82,7 @@ export default function HighlightPage() {
                                     <li key={cat.id || cat.slug}>
                                         <button
                                             onClick={() => { setSelectedCategory(cat.slug); setVisibleCount(6); }}
-                                            className={`w-full text-left px-3 py-2 rounded-md text-sm transition-colors flex justify-between items-center ${
+                                            className={`w-full text-left px-3 py-2 rounded-md text-sm transition-colors flex justify-between items-center cursor-pointer ${
                                                 selectedCategory === cat.slug
                                                     ? "bg-[#4c3b71] text-white"
                                                     : "hover:bg-gray-100 text-gray-700"
@@ -100,7 +101,7 @@ export default function HighlightPage() {
                     <div className={showRightSidebar ? "lg:col-span-8" : "lg:col-span-10"}>
 
                         {/* === MOBILE HEADER (Custom 2-Row Layout) === */}
-                        <div className="lg:hidden mb-6 flex flex-col gap-4">
+                        <div className="lg:hidden mb-4 flex flex-col gap-4">
 
                             {/* Row 1: Title (Left) + Search (Right) */}
                             <div className="flex items-center gap-3">
@@ -210,7 +211,7 @@ export default function HighlightPage() {
 
                         {/* --- LOAD MORE BUTTON --- */}
                         {hasMore && (
-                            <div className="flex justify-center mt-10 mb-4">
+                            <div className="flex justify-center mt-4">
                                 <button
                                     onClick={handleLoadMore}
                                     className="group flex items-center gap-2 px-8 py-3 bg-white border border-gray-200 hover:border-[#4c3b71] hover:text-[#4c3b71] text-gray-600 text-sm font-bold rounded-full shadow-sm hover:shadow-md transition-all duration-300"
@@ -246,5 +247,6 @@ export default function HighlightPage() {
                 </div>
             </div>
         </div>
+        </>
     );
 }

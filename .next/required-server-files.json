@@ -124,7 +124,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "/Users/macos/Desktop/8Pro/Dev/share-sport-user",
+    "outputFileTracingRoot": "/Users/macos/Desktop/8Pro/Production/share-sport-user",
     "cacheComponents": false,
     "cacheLife": {
       "default": {
@@ -314,11 +314,11 @@
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.ts",
     "turbopack": {
-      "root": "/Users/macos/Desktop/8Pro/Dev/share-sport-user"
+      "root": "/Users/macos/Desktop/8Pro/Production/share-sport-user"
     },
     "distDirRoot": ".next"
   },
-  "appDir": "/Users/macos/Desktop/8Pro/Dev/share-sport-user",
+  "appDir": "/Users/macos/Desktop/8Pro/Production/share-sport-user",
   "relativeAppDir": "",
   "files": [
     ".next/routes-manifest.json",

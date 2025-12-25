@@ -34,7 +34,7 @@ export default function BigBanner() {
     if (!ads || ads.length === 0) return null;
 
     return (
-        <div className="relative w-full h-55 md:h-auto md:max-h-120 md:aspect-video overflow-hidden rounded-xl shadow-lg my-6 group bg-gray-50">
+        <div className="relative w-full h-55 md:h-auto md:max-h-120 md:aspect-video overflow-hidden rounded-xl shadow-lg my-4 md:my-8 group bg-gray-50">
             {adsFilter.map((ad: { id: number; link_url: string | undefined; image_url: string; title: string; }, index: number) => (
                 <a
                     key={ad.id || index}

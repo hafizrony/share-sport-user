@@ -1,4 +1,5 @@
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+
+const BASE_URL =process.env.NEXT_PUBLIC_BASE_URL;
 export const ENDPOINTS = {
     NEWS: `${BASE_URL}/news`,
     HIGHLIGHT: `${BASE_URL}/highlights`,

@@ -22,6 +22,9 @@ export default function NewsDetailPage() {
     const {sidebarBanners:sidebarBanners,isLoading:isBannerLoading,isError:isBannerError}=useSidebarBanners();
 
     useEffect(() => {
+        if(data){
+            document.title = `${data.title} - Share Sport`;
+        }
         if (data?.id) {
             const countView = async () => {
                 try {
@@ -75,18 +78,18 @@ export default function NewsDetailPage() {
     const showRightSidebar = sidebarBanners.length > 0;
 
     return (
-        <div className="container mx-auto px-4 py-8">
+        <div className="container mx-auto md:px-4 md:py-8 py-4">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-2">
                 <div className={showRightSidebar?"lg:col-span-9  overflow-hidden":"lg:col-span-12  overflow-hidden"}>
                     <h1 className="text-3xl md:text-4xl pb-4 leading-9 font-extrabold">{data.title}</h1>
                     <p className=" text-gray-500 pb-8">{data.summary}</p>
-                    <div className="relative w-full h-[300px] md:h-[450px]">
+                    <div className="relative aspect-video">
                         <Image
                         src={displayImage}
                         alt={data.title}
                         fill
                         priority
-                        className="object-cover"
+                        className="object-cover rounded-sm"
                         />
                         <div className="absolute top-4 left-4">
                             <span className="bg-[#483D67] text-white px-3 py-1 rounded-full text-xs font-bold uppercase">

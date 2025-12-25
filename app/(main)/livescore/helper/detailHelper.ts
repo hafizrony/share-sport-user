@@ -9,6 +9,12 @@ export const getStartTime = (dateStr: string) => {
   const s = dateStr.toString();
   return s.length >= 12 ? `${s.slice(8, 10)}:${s.slice(10, 12)}` : "--:--";
 };
+export const formatMinute=(min: number, minEx?: number) => {
+  if (minEx && minEx > 0) {
+    return `${min}+${minEx}'`;
+  }
+  return `${min}'`;
+}
 
 // --- LINEUP HELPERS ---
 
@@ -73,4 +79,5 @@ export const IncidentTypesMap: Record<number, { label: string; icon: string; col
   43: { label: "Yellow Card", icon: "█", color: "text-yellow-400" },
   44: { label: "Second Yellow", icon: "█", color: "text-yellow-600" },
   45: { label: "Red Card", icon: "█", color: "text-red-500" },
+  47: {label: "Goal ET", icon: "⚽", color: "text-green-600" }
 };

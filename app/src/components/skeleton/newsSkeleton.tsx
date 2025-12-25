@@ -17,8 +17,8 @@ export default function NewsHeroSkeleton() {
                 <div className="flex flex-col gap-3 h-full">
                     {[...Array(4)].map((_, i) => (
                         <div key={i} className="flex gap-4 p-3 rounded-xl border border-gray-100 h-full items-center">
-                            <div className="w-32 h-24 bg-gray-200 rounded-lg flex-shrink-0"></div>
-                            <div className="flex flex-col flex-grow py-2 justify-between h-24">
+                            <div className="w-32 h-24 bg-gray-200 rounded-lg shrink-0"></div>
+                            <div className="flex flex-col grow py-2 justify-between h-24">
                                 <div className="h-3 w-16 bg-gray-200 rounded-full mb-1"></div>
                                 <div className="space-y-2">
                                     <div className="h-4 w-full bg-gray-200 rounded"></div>
